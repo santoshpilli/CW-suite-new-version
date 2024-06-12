@@ -1,0 +1,230 @@
+{
+    "sections": [
+        {
+            "props": {
+                "layout": "centered",
+                "backgroundImage": "/images/supplychain hero.webp"
+            },
+            "content": {
+                "title": "Revolutionizing Supply Chain Efficiency",
+                "subtitle": "From precise inventory management to advanced analytics, our solution is designed to streamline operations and forecast demands with unmatched accuracy.",
+                "components": [
+                    {
+                        "props": {
+                            "link": "/features",
+                            "label": "Contact Sales",
+                            "buttonStyle": "primary"
+                        },
+                        "styling": {
+                            "color": "#ffffff",
+                            "backgroundColor": "#A4CD38"
+                        },
+                        "componentType": "Button"
+                    }
+                ]
+            },
+            "styling": {
+                "textColor": "#ffffff",
+                "backgroundColor": "#0047AB"
+            },
+            "sectionType": "HeroSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Supply Chain Excellence",
+                "subtitle": "Harness the power of real-time, across-the-board inventory monitoring",
+                "images": [
+                    {
+                        "url": "/images/integrated operations.png",
+                        "styles": {
+                            "backgroundColor": "#60C0B0",
+                            "imageCardbackgroundColor": "#EAF2FF",
+                            "borderRadius": "25px",
+                            "padding": "15px",
+                            "marginTop": "5px",
+                            "maxWidth": "300px"
+                        },
+                        "heading": "Integrated Operations",
+                        "description": "Seamlessly unify all facets of your supply chain, ensuring coordinated and efficient global operations"
+                    },
+                    {
+                        "url": "/images/data driven.png",
+                        "styles": {
+                            "backgroundColor": "#CBD1E5",
+                            "imageCardbackgroundColor": "#97ABEE",
+                            "borderRadius": "16px",
+                            "padding": "15px",
+                            "marginTop": "5px",
+                            "maxWidth": "300px"
+                        },
+                        "heading": "Data- Driven Insights",
+                        "description": "Harness the power of real-time analytics and demand forecasting to make informed, strategic decisions"
+                    },
+                    {
+                        "url": "/images/scalability.png",
+                        "styles": {
+                            "backgroundColor": "#BEE1E6",
+                            "imageCardbackgroundColor": "#FFF0F0",
+                            "borderRadius": "16px",
+                            "padding": "15px",
+                            "marginTop": "5px",
+                            "maxWidth": "300px"
+                        },
+                        "heading": "Scalability and Flexibility",
+                        "description": "Easily adapt and scale your supply chain operations to meet evolving business demands and market conditions"
+                    }
+                ]
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "CardImgSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Efficient Stock Management",
+                "imageUrl": "/images/supplychain effect.png",
+                "features": [
+                    {
+                        "icon": "/icons/inventory-icon.png",
+                        "title": "Real-time Monitoring",
+                        "description": "Accurate tracking of inventory levels",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/sales-icon.png",
+                        "title": "Automated Alerts",
+                        "description": "Notifications for low or overstock situations",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/customer-icon.png",
+                        "title": "Efficient Organization",
+                        "description": "Easy categorization and management of products",
+                        "componentType": "FeatureItem"
+                    }
+                ],
+                "subtitle": ""
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "RightImgLeftText"
+        },
+        {
+            "props": {
+                "layout": "slider"
+            },
+            "content": {
+                "testimonials": [
+                    {
+                        "quote": "Thanks to this software, we've seen remarkable improvements in our retail operations.",
+                        "author": "Alex Johnson",
+                        "company": "RetailWorld",
+                        "position": "CEO"
+                    },
+                    {
+                        "quote": "Our inventory management has never been more accurate and easy to handle.",
+                        "author": "Samantha Smith",
+                        "company": "The Fashion Hub",
+                        "position": "Operations Manager"
+                    }
+                ]
+            },
+            "styling": {},
+            "sectionType": "TestimonialsSection"
+        },
+        {
+            "props": {
+                "method": "POST",
+                "formAction": "/submit-contact"
+            },
+            "content": {
+                "title": "Talk to us",
+                "subtitle": "We are here to assist you with any issues or queries you may have",
+                "components": [
+                    {
+                        "props": {
+                            "name": "name",
+                            "type": "text",
+                            "placeholder": "Your Name"
+                        },
+                        "componentType": "TextField"
+                    },
+                    {
+                        "props": {
+                            "name": "email",
+                            "type": "email",
+                            "placeholder": "Your Email"
+                        },
+                        "componentType": "TextField"
+                    },
+                    {
+                        "props": {
+                            "name": "message",
+                            "placeholder": "Your Message"
+                        },
+                        "componentType": "TextArea"
+                    },
+                    {
+                        "props": {
+                            "type": "submit",
+                            "label": "Send Message"
+                        },
+                        "styling": {
+                            "color": "#ffffff",
+                            "backgroundColor": "#FAB005"
+                        },
+                        "componentType": "Button"
+                    }
+                ]
+            },
+            "styling": {
+                "textColor": "#ffffff",
+                "backgroundColor": "#0047AB"
+            },
+            "sectionType": "ContactFormSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "Data": [
+                    {
+                        "answer": "Our platform offers advanced inventory tracking and management features, enabling businesses to monitor stock levels, track inventory movements, and optimize stock based on real-time data. This helps in reducing overstocking or stockouts and improves overall inventory efficiency.",
+                        "questions": "How does CW Supply Chain manage inventory tracking and management?"
+                    },
+                    {
+                        "answer": "Yes, CW Supply Chain significantly streamlines order fulfillment and logistics processes. It integrates various fulfillment stages from order receipt to delivery, ensuring efficient logistics management.",
+                        "questions": " Can CW Supply Chain streamline order fulfillment and logistics?"
+                    },
+                    {
+                        "answer": " Our platform provides robust supplier management tools, allowing businesses to effectively manage their supplier relationships. It includes features for managing contracts, and ensuring that supply chain operations are aligned with business goals.",
+                        "questions": "How does CW Supply Chain handle supplier management?"
+                    },
+                    {
+                        "answer": " Absolutely. Our platform provides real-time analytics, offering businesses up-to-the-minute insights into their supply chain operations. This data is crucial for making informed decisions and responding quickly to changing market conditions.",
+                        "questions": "Can I get real-time analytics with CW Supply Chain?"
+                    },
+                    {
+                        "answer": "  CW Supply Chain is designed to seamlessly integrate with various other systems and software used by businesses. This ensures a cohesive and efficient workflow, connecting different aspects of your business operations with the supply chain management system.",
+                        "questions": "What are the integration capabilities of CW Supply Chain?"
+                    },
+                    {
+                        "answer": "  Yes, our supply chain solution is scalable and can be customized to fit the needs of businesses of any size, from small enterprises to large corporations. Its flexible design allows it to adapt to the unique challenges and requirements of different industries.",
+                        "questions": "Is CW Supply Chain suitable for businesses of all sizes?"
+                    }
+                ],
+                "title": "FAQS",
+                "subtitle": "Frequently asked questions"
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "FaqSection"
+        }
+    ],
+    "pageTitle": "Retail Software Solutions",
+    "pageDescription": "Comprehensive retail management software designed for modern businesses."
+}

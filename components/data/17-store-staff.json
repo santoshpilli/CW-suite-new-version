@@ -1,0 +1,275 @@
+{
+    "sections": [
+        {
+            "props": {
+                "layout": "centered",
+                "backgroundImage": "/images/store staff.webp"
+            },
+            "content": {
+                "title": "Empower Your Staff, Elevate Your Store",
+                "subtitle": "Discover how CW Store Staff Solutions transforms store operations, offering tools for effective staff management and support to enhance store efficiency.",
+                "components": [
+                    {
+                        "props": {
+                            "link": "/features",
+                            "label": "Contact Sales",
+                            "buttonStyle": "primary"
+                        },
+                        "styling": {
+                            "color": "#101828",
+                            "backgroundColor": "#FAB005"
+                        },
+                        "componentType": "Button"
+                    }
+                ]
+            },
+            "styling": {
+                "textColor": "#000000",
+                "backgroundColor": "#0047AB"
+            },
+            "sectionType": "HeroSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Staff Scheduling and Management",
+                "subtitle": "Optimize your workforce for peak efficiency and service",
+                "cards": [
+                    {
+                        "url": "/images/automated scheduling.png",
+                        "iconUrl": null,
+                        "styles": {
+                            "backgroundColor": "#DBECE5",
+                            "imageCardbackgroundColor": "#DBECE5",
+                            "borderRadius": "16px",
+                            "padding": "20px",
+                            "marginTop": "25px",
+                            "maxWidth": "340px"
+                        },
+                        "heading": "Automated Scheduling",
+                        "description": "Simplify shift planning with automated scheduling tools."
+                    },
+                    {
+                        "url": "/images/availability tracking.png",
+                        "iconUrl": null,
+                        "styles": {
+                            "backgroundColor": "#FFF3EA",
+                            "imageCardbackgroundColor": "#FFF3EA",
+                            "borderRadius": "16px",
+                            "padding": "20px",
+                            "marginTop": "25px",
+                            "maxWidth": "340px"
+                        },
+                        "heading": "Availability Tracking",
+                        "description": "Keep track of staff availability and manage leave requests seamlessly."
+                    },
+                    {
+                        "url": "/images/shift swap.png",
+                        "iconUrl": null,
+                        "styles": {
+                            "backgroundColor": "#CBD1E5",
+                            "imageCardbackgroundColor": "#CBD1E5",
+                            "borderRadius": "16px",
+                            "padding": "20px",
+                            "marginTop": "25px",
+                            "maxWidth": "340px"
+                        },
+                        "heading": "Shift Swap Options",
+                        "description": "Facilitate easy shift swaps among staff for greater flexibility."
+                    },
+                    {
+                        "url": "/images/time tracking.png",
+                        "iconUrl": null,
+                        "styles": {
+                            "backgroundColor": "#BEE1E6",
+                            "imageCardbackgroundColor": "#BEE1E6",
+                            "borderRadius": "16px",
+                            "padding": "20px",
+                            "marginTop": "25px",
+                            "maxWidth": "340px"
+                        },
+                        "heading": "Time-Tracking Integration",
+                        "description": "Utilize time tracking to assess staff performance and optimize scheduling."
+                    }
+                ]
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "FourCardSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Training and Performance Insights",
+                "imageUrl": "/images/training staff.png",
+                "features": [
+                    {
+                        "icon": "/icons/inventory-icon.png",
+                        "title": "",
+                        "description": "Performance Analytics: Utilize data-driven insights to monitor and enhance staff performance.",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/sales-icon.png",
+                        "title": "",
+                        "description": "Feedback Mechanisms: Incorporate feedback tools for continuous staff development.",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/customer-icon.png",
+                        "title": "",
+                        "description": "Reward Programs: Motivate staff with recognition and rewards for outstanding performance.",
+                        "componentType": "FeatureItem"
+                    }
+                ],
+                "subtitle": "Foster a culture of continuous improvement and skill enhancement"
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "LeftImageRightText"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Advanced In-Store Tools",
+                "imageUrl": "/images/advanced store.png",
+                "features": [
+                    {
+                        "icon": "/icons/inventory-icon.png",
+                        "title": "",
+                        "description": "Foster effective team communication with integrated messaging tools for the staff.",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/sales-icon.png",
+                        "title": "",
+                        "description": "Access CRM tools to provide personalized customer service.",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/customer-icon.png",
+                        "title": "",
+                        "description": "Enable staff to check inventory levels instantly to assist customers.",
+                        "componentType": "FeatureItem"
+                    }
+                ],
+                "subtitle": "Equip your staff with our suite of digital tools designed to streamline customer service."
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "RightImgLeftText"
+        },
+        {
+            "props": {
+                "layout": "slider"
+            },
+            "content": {
+                "testimonials": [
+                    {
+                        "quote": "Thanks to this software, we've seen remarkable improvements in our retail operations.",
+                        "author": "Alex Johnson",
+                        "company": "RetailWorld",
+                        "position": "CEO"
+                    },
+                    {
+                        "quote": "Our inventory management has never been more accurate and easy to handle.",
+                        "author": "Samantha Smith",
+                        "company": "The Fashion Hub",
+                        "position": "Operations Manager"
+                    }
+                ]
+            },
+            "styling": {},
+            "sectionType": "TestimonialsSection"
+        },
+        {
+            "props": {
+                "method": "POST",
+                "formAction": "/submit-contact"
+            },
+            "content": {
+                "title": "Talk to us",
+                "subtitle": "We are here to assist you with any issues or queries you may have",
+                "components": [
+                    {
+                        "props": {
+                            "name": "name",
+                            "type": "text",
+                            "placeholder": "Your Name"
+                        },
+                        "componentType": "TextField"
+                    },
+                    {
+                        "props": {
+                            "name": "email",
+                            "type": "email",
+                            "placeholder": "Your Email"
+                        },
+                        "componentType": "TextField"
+                    },
+                    {
+                        "props": {
+                            "name": "message",
+                            "placeholder": "Your Message"
+                        },
+                        "componentType": "TextArea"
+                    },
+                    {
+                        "props": {
+                            "type": "submit",
+                            "label": "Send Message"
+                        },
+                        "styling": {
+                            "color": "#ffffff",
+                            "backgroundColor": "#FAB005"
+                        },
+                        "componentType": "Button"
+                    }
+                ]
+            },
+            "styling": {
+                "textColor": "#ffffff",
+                "backgroundColor": "#0047AB"
+            },
+            "sectionType": "ContactFormSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "Data": [
+                    {
+                        "questions": "What is the purpose of CW Store Staff?",
+                        "answer": "CW Store Staff management software is designed to optimize workforce operations in retail environments. It helps streamline staff scheduling, enhance performance tracking, and improve overall staff management to ensure your team operates efficiently and effectively."
+                    },
+                    {
+                        "questions": "How does Store Staff assist in staff scheduling?",
+                        "answer": "The software includes tools for creating and managing staff schedules that accommodate varying shifts and workloads. It allows for easy adjustments to schedules, ensures adequate staffing during peak times, and reduces conflicts and overlaps in scheduling."
+                    },
+                    {
+                        "questions": "Can CW Store Staff software track employee performance?",
+                        "answer": "Yes, it features comprehensive performance tracking capabilities. Managers can set performance goals, monitor achievements, and review metrics directly through the software to ensure staff are meeting expected standards and to identify areas for improvement."
+                    },
+                    {
+                        "questions": "Does the system support real-time communication with staff?",
+                        "answer": "Absolutely. Store staff includes built-in communication tools that enable real-time messaging and updates between managers and staff. This ensures everyone is informed and can respond quickly to changes or requirements."
+                    },
+                    {
+                        "questions": " What features does CW Store Staff offer for employee onboarding?",
+                        "answer": "Store Staff facilitates a streamlined onboarding process with tools for managing and storing essential documents, automating the distribution of training materials, and scheduling introductory sessions. This helps new employees integrate smoothly into their roles."
+                    }
+                ],
+                "title": "FAQS",
+                "subtitle": "Frequently asked questions"
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "FaqSection"
+        }
+    ],
+    "pageTitle": "Retail Software Solutions",
+    "pageDescription": "Comprehensive retail management software designed for modern businesses."
+}

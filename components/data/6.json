@@ -1,0 +1,253 @@
+{
+    "sections": [
+        {
+            "props": {
+                "layout": "centered",
+                "backgroundImage": "/images/people-first hero.png "
+            },
+            "content": {
+                "title": "Elevating Workforce Potential with People First",
+                "subtitle": "Revolutionize your human resource management with tools designed to attract, engage, and retain top talent",
+                "components": [
+                    {
+                        "props": {
+                            "link": "/features",
+                            "label": "Contact Sales",
+                            "buttonStyle": "primary"
+                        },
+                        "styling": {
+                            "color": "#ffffff",
+                            "backgroundColor": "#FAB005"
+                        },
+                        "componentType": "Button"
+                    }
+                ]
+            },
+            "styling": {
+                "textColor": "#ffffff",
+                "backgroundColor": "#0047AB"
+            },
+            "sectionType": "HeroSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Aligning People and Performance",
+                "subtitle": "Comprehensive tools for optimizing every aspect of your workforce management",
+                "images": [
+                    {
+                        "url": "/images/peoplefirst align1.png",
+                        "styles": {
+                            "borderRadius": "58px",
+                            "height": "162px",
+                            "width": "162px"
+                        },
+                        "heading": "Performance Management",
+                        "description": "Implement goal-setting and performance tracking to align individual achievements with business objectives."
+                    },
+                    {
+                        "url": "/images/peoplefirst align2.png",
+                        "styles": {
+                            "borderRadius": "58px",
+                            "height": "422px",
+                            "width": "344px"
+                        },
+                        "heading": "Employee Records",
+                        "description": "Maintain and access employee records securely and conveniently."
+                    },
+                    {
+                        "url": "/images/peoplefirst align3.png",
+                        "styles": {
+                            "borderRadius": "58px",
+                            "height": "422px",
+                            "width": "344px"
+                        },
+                        "heading": "Feedback and Recognition",
+                        "description": "Cultivate a culture of appreciation with regular feedback mechanisms and recognition programs."
+                    }
+                ]
+            },
+            "styling": {
+                "backgroundColor": "#87CEEB"
+            },
+            "sectionType": "ThreeImgSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Streamlining Talent Acquisition",
+                "imageUrl": "/images/streaming first.png",
+                "features": [
+                    {
+                        "icon": "/icons/inventory-icon.png",
+                        "title": "Efficient Hiring",
+                        "description": "Simplify the recruitment process with intuitive hiring tools.",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/sales-icon.png",
+                        "title": "Welcoming Onboarding",
+                        "description": "Sign an onboarding process that welcomes new employees and integrates them into your culture from day one.",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/customer-icon.png",
+                        "title": "Applicant Database",
+                        "description": "Maintain a robust database of potential candidates for future opportunities.",
+                        "componentType": "FeatureItem"
+                    }
+                ],
+                "subtitle": "Seamlessly attract and integrate talent into your retail operations"
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "LeftImageRightText"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Cultivating Engagement and Ensuring Compliance",
+                "imageUrl": "/images/cultivating people.png",
+                "features": [
+                    {
+                        "icon": "/icons/inventory-icon.png",
+                        "title": "Engagement Tools",
+                        "description": "Implement tools for regular feedback, surveys, and employee recognition.",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/sales-icon.png",
+                        "title": "HR Analytics",
+                        "description": "Gain insights from HR data to improve workforce management and planning.",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/customer-icon.png",
+                        "title": "Legal Compilance",
+                        "description": "Stay updated and compliant with labor laws and HR regulations.",
+                        "componentType": "FeatureItem"
+                    }
+                ],
+                "subtitle": "Enhance employee satisfaction and adhere to legal standards effortlessly"
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "RightImgLeftText"
+        },
+        {
+            "props": {
+                "layout": "slider"
+            },
+            "content": {
+                "testimonials": [
+                    {
+                        "quote": "Thanks to this software, we've seen remarkable improvements in our retail operations.",
+                        "author": "Alex Johnson",
+                        "company": "RetailWorld",
+                        "position": "CEO"
+                    },
+                    {
+                        "quote": "Our inventory management has never been more accurate and easy to handle.",
+                        "author": "Samantha Smith",
+                        "company": "The Fashion Hub",
+                        "position": "Operations Manager"
+                    }
+                ]
+            },
+            "styling": {},
+            "sectionType": "TestimonialsSection"
+        },
+        {
+            "props": {
+                "method": "POST",
+                "formAction": "/submit-contact"
+            },
+            "content": {
+                "title": "Talk to us",
+                "subtitle": "We are here to assist you with any issues or queries you may have",
+                "components": [
+                    {
+                        "props": {
+                            "name": "name",
+                            "type": "text",
+                            "placeholder": "Your Name"
+                        },
+                        "componentType": "TextField"
+                    },
+                    {
+                        "props": {
+                            "name": "email",
+                            "type": "email",
+                            "placeholder": "Your Email"
+                        },
+                        "componentType": "TextField"
+                    },
+                    {
+                        "props": {
+                            "name": "message",
+                            "placeholder": "Your Message"
+                        },
+                        "componentType": "TextArea"
+                    },
+                    {
+                        "props": {
+                            "type": "submit",
+                            "label": "Send Message"
+                        },
+                        "styling": {
+                            "color": "#ffffff",
+                            "backgroundColor": "#FAB005"
+                        },
+                        "componentType": "Button"
+                    }
+                ]
+            },
+            "styling": {
+                "textColor": "#ffffff",
+                "backgroundColor": "#0047AB"
+            },
+            "sectionType": "ContactFormSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "Data": [
+                    {
+                        "answer": "Our solution streamlines the talent acquisition process by providing tools for job posting, applicant tracking, and candidate assessment. This enables retail businesses to attract and select the best talent efficiently, matching the right candidates to the right roles.  ",
+                        "questions": "How does CW People First aid in talent acquisition?"
+                    },
+                    {
+                        "answer": " CW People First simplifies the onboarding process with automated workflows, checklists, and document management. New employees can smoothly transition into their roles with a structured and engaging onboarding experience.",
+                        "questions": "What features does CW People First offer for employee onboarding?"
+                    },
+                    {
+                        "answer": " Yes, our system offers robust employee records management. It securely stores and organizes all employee data, from personal information to employment history, making it easily accessible for HR management purposes.",
+                        "questions": "Can CW People First manage employee records effectively?"
+                    },
+                    {
+                        "answer": "The solution includes tools to boost employee engagement, such as feedback mechanisms, performance management systems, and recognition programs. This helps in building a positive work environment and increasing employee satisfaction and retention.",
+                        "questions": "How does CW People First enhance employee engagement?"
+                    },
+                    {
+                        "answer": "Absolutely. CW People First is designed to cater to retail businesses of all sizes, including small businesses. It is scalable and can be customized to fit the unique needs of your business, regardless of its size.",
+                        "questions": "Is CW People First suitable for small retail businesses?"
+                    },
+                    {
+                        "answer": "Yes, our solution is built to integrate seamlessly with your existing business systems, such as payroll, time tracking, and other HR-related software, ensuring a unified and efficient HR management experience.",
+                        "questions": "Can CW People First integrate with existing systems?"
+                    }
+                ],
+                "title": "FAQS",
+                "subtitle": "Frequently asked questions"
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "FaqSection"
+        }
+    ],
+    "pageTitle": "Retail Software Solutions",
+    "pageDescription": "Comprehensive retail management software designed for modern businesses."
+}

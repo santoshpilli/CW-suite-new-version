@@ -1,0 +1,272 @@
+{
+    "sections": [
+        {
+            "props": {
+                "layout": "centered",
+                "backgroundImage": "/images/sports hero.webp"
+            },
+            "content": {
+                "title": "Score Big with Advanced Sports Retail Solutions",
+                "subtitle": "CW Suite drives your sports retail business to the championship league with robust tech that enhances performance, customer engagement, and operational agility",
+                "components": [
+                    {
+                        "props": {
+                            "link": "/features",
+                            "label": "Contact Sales",
+                            "buttonStyle": "primary"
+                        },
+                        "styling": {
+                            "color": "#A4CD38",
+                            "backgroundColor": "#FAB005"
+                        },
+                        "componentType": "Button"
+                    }
+                ]
+            },
+            "styling": {
+                "textColor": "#FFFFFF",
+                "backgroundColor": "#0047AB"
+            },
+            "sectionType": "HeroSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Agile Checkout Plays",
+                "subtitle": "Equip your store with fast, flexible sales solutions for a winning customer service",
+                "cards": [
+                    {
+                        "url": "/images/speedypos.png",
+                        "iconUrl": "/images/speedyicon.png",
+                        "styles": {
+                            "backgroundColor": "#DBECE5",
+                            "imageCardbackgroundColor": "#DBECE5",
+                            "borderRadius": "16px",
+                            "padding": "20px",
+                            "marginTop": "25px",
+                            "maxWidth": "300px"
+                        },
+                        "heading": "Speedy Mobile POS",
+                        "description": "Ensure client peace of mind with high-security transaction processes."
+                    },
+                    {
+                        "url": "/images/selfservice.png",
+                        "iconUrl": "/images/selfserviceicon.png",
+                        "styles": {
+                            "backgroundColor": "#D1ECFD",
+                            "imageCardbackgroundColor": "#D1ECFD",
+                            "borderRadius": "16px",
+                            "padding": "20px",
+                            "marginTop": "25px",
+                            "maxWidth": "300px"
+                        },
+                        "heading": "Self-Service Efficiency",
+                        "description": "Keep a detailed client book for tailored interactions and follow-ups."
+                    },
+                    {
+                        "url": "/images/multifunctional.png",
+                        "iconUrl": "/images/multifunctionaliconpos.png",
+                        "styles": {
+                            "backgroundColor": "#FFF3EA",
+                            "imageCardbackgroundColor": "#FFF3EA",
+                            "borderRadius": "16px",
+                            "padding": "20px",
+                            "marginTop": "25px",
+                            "maxWidth": "300px"
+                        },
+                        "heading": "Multifunctional POS",
+                        "description": "Enable sales associates to conduct transactions discreetly anywhere in the store."
+                    }
+                ]
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "CardMergeSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Victory in Inventory Control",
+                "imageUrl": "/images/victory sport.png",
+                "features": [
+                    {
+                        "icon": "/icons/inventory-icon.png",
+                        "title": "Smart Equipment Tracking",
+                        "description": "RFID solutions for easy equipment and apparel tracking.",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/sales-icon.png",
+                        "title": "Seasonal Stock Management",
+                        "description": "Adjust inventory levels for seasonal sports and activities.",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/customer-icon.png",
+                        "title": "Demand Forecasting",
+                        "description": "Use analytics to predict and fulfill customer demand.",
+                        "componentType": "FeatureItem"
+                    }
+                ],
+                "subtitle": "Stay ahead of the game with real-time inventory management tailored for sports retail"
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "LeftImageRightText"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Championing Customer Engagement",
+                "subtitle": "Create loyal fans with personalized shopping experiences that resonate with sports enthusiasts",
+                "images": [
+                    {
+                        "url": "/images/sports roundimg1.png",
+                        "styles": {
+                            "borderRadius": "10px",
+                            "height": "200px",
+                            "width": "200px"
+                        },
+                        "heading": "Loyalty Programs",
+                        "description": "Reward points for fitness classes, team apparel, and gear."
+                    },
+                    {
+                        "url": "/images/sports roundimg2.png",
+                        "styles": {
+                            "borderRadius": "10px",
+                            "height": "200px",
+                            "width": "200px"
+                        },
+                        "heading": "Interactive Shopping App",
+                        "description": "Features for tracking fitness goals and finding the right gear."
+                    },
+                    {
+                        "url": "/images/sports roundimg3.png",
+                        "styles": {
+                            "borderRadius": "10px",
+                            "height": "200px",
+                            "width": "200px"
+                        },
+                        "heading": "Community Building",
+                        "description": "Leverage your app to create sports communities and event sign-ups."
+                    }
+                ]
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "RoundImgSection"
+        },
+        {
+            "props": {
+                "layout": "slider"
+            },
+            "content": {
+                "testimonials": [
+                    {
+                        "quote": "Thanks to this software, we've seen remarkable improvements in our retail operations.",
+                        "author": "Alex Johnson",
+                        "company": "RetailWorld",
+                        "position": "CEO"
+                    },
+                    {
+                        "quote": "Our inventory management has never been more accurate and easy to handle.",
+                        "author": "Samantha Smith",
+                        "company": "The Fashion Hub",
+                        "position": "Operations Manager"
+                    }
+                ]
+            },
+            "styling": {},
+            "sectionType": "TestimonialsSection"
+        },
+        {
+            "props": {
+                "method": "POST",
+                "formAction": "/submit-contact"
+            },
+            "content": {
+                "title": "Talk to us",
+                "subtitle": "We are here to assist you with any issues or queries you may have",
+                "components": [
+                    {
+                        "props": {
+                            "name": "name",
+                            "type": "text",
+                            "placeholder": "Your Name"
+                        },
+                        "componentType": "TextField"
+                    },
+                    {
+                        "props": {
+                            "name": "email",
+                            "type": "email",
+                            "placeholder": "Your Email"
+                        },
+                        "componentType": "TextField"
+                    },
+                    {
+                        "props": {
+                            "name": "message",
+                            "placeholder": "Your Message"
+                        },
+                        "componentType": "TextArea"
+                    },
+                    {
+                        "props": {
+                            "type": "submit",
+                            "label": "Send Message"
+                        },
+                        "styling": {
+                            "color": "#ffffff",
+                            "backgroundColor": "#FAB005"
+                        },
+                        "componentType": "Button"
+                    }
+                ]
+            },
+            "styling": {
+                "textColor": "#ffffff",
+                "backgroundColor": "#0047AB"
+            },
+            "sectionType": "ContactFormSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "Data": [
+                    {
+                        "questions": "How does CW Suite enhance inventory management for sports retailers?  ",
+                        "answer": "CW Suite provides specialized inventory management features that allow sports retailers to efficiently track and manage a wide variety of sporting goods, equipment, and apparel, including seasonal and high-demand items, ensuring optimal stock levels and quick replenishment."
+                    },
+                    {
+                        "questions": "Can CW Suite handle online and in-store integration for sports retailers?  ",
+                        "answer": "Yes, CW Suite seamlessly integrates both online and physical store operations, enabling sports retailers to offer a unified shopping experience. Customers can purchase items online and pick them up in-store, or check online for product availability at their local stores."
+                    },
+                    {
+                        "questions": "What features does CW Suite offer to boost customer engagement in sports retail?  ",
+                        "answer": "CW Suite includes tools for launching targeted marketing campaigns, managing loyalty programs tailored to sports enthusiasts, and providing personalized promotions that resonate with active lifestyles and sports fans, thereby increasing engagement and customer retention."
+                    },
+                    {
+                        "questions": " Does CW Suite support special events and promotions for sports retailers? ",
+                        "answer": "Absolutely. Our platform allows sports retailers to easily organize and promote special events, sales, and product launches that are crucial for leveraging major sporting events and seasonal peaks, helping to attract more customers and boost sales."
+                    },
+                    {
+                        "questions": "How does CW Suite ensure a fast and efficient checkout process for sports retailers? ",
+                        "answer": "CW Suite offers advanced POS systems and mobile checkout solutions that expedite the checkout process, reduce queues, and improve the overall customer experience, particularly beneficial during high-traffic periods such as game days or product release days."
+                    }
+                ],
+                "title": "FAQS",
+                "subtitle": "Frequently asked questions"
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "FaqSection"
+        }
+    ],
+    "pageTitle": "Retail Software Solutions",
+    "pageDescription": "Comprehensive retail management software designed for modern businesses."
+}

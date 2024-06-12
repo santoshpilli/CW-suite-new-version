@@ -1,0 +1,286 @@
+{
+    "sections": [
+        {
+            "props": {
+                "layout": "centered",
+                "backgroundImage": "/images/home furnishing hero.webp"
+            },
+            "content": {
+                "title": "Designing Success in Every Space",
+                "subtitle": "CW Suite transforms the furniture and home furnishings retail experience with smart, integrated solutions tailored for space, style, and efficiency",
+                "components": [
+                    {
+                        "props": {
+                            "link": "/features",
+                            "label": "Contact Sales",
+                            "buttonStyle": "primary"
+                        },
+                        "styling": {
+                            "color": "#A4CD38",
+                            "backgroundColor": "#FAB005"
+                        },
+                        "componentType": "Button"
+                    }
+                ]
+            },
+            "styling": {
+                "textColor": "#101828",
+                "backgroundColor": "#0047AB"
+            },
+            "sectionType": "HeroSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Showroom Innovation and Efficiency",
+                "subtitle": "Revolutionize your showroom with technology that enhances customer interaction and inventory management",
+                "cards": [
+                    {
+                        "url": "/images/rfidsol.png",
+                        "iconUrl": "/images/rfidicon1.png",
+                        "styles": {
+                            "backgroundColor": "#DBECE5",
+                            "imageCardbackgroundColor": "#DBECE5",
+                            "borderRadius": "16px",
+                            "padding": "20px",
+                            "marginTop": "25px",
+                            "maxWidth": "300px"
+                        },
+                        "heading": "RFID Solutions",
+                        "description": "Utilize RFID technology for efficient tracking and management of large furniture items."
+                    },
+                    {
+                        "url": "/images/interactivedisplay.png",
+                        "iconUrl": "/images/interactiveicon.png",
+                        "styles": {
+                            "backgroundColor": "#D1ECFD",
+                            "imageCardbackgroundColor": "#D1ECFD",
+                            "borderRadius": "16px",
+                            "padding": "20px",
+                            "marginTop": "25px",
+                            "maxWidth": "300px"
+                        },
+                        "heading": "Interactive Displays",
+                        "description": "Engage customers with digital displays that provide detailed product information, customization options, and more."
+                    },
+                    {
+                        "url": "/images/mobilepos.png",
+                        "iconUrl": "/images/mobileposicon.png",
+                        "styles": {
+                            "backgroundColor": "#FFF3EA",
+                            "imageCardbackgroundColor": "#FFF3EA",
+                            "borderRadius": "16px",
+                            "padding": "20px",
+                            "marginTop": "25px",
+                            "maxWidth": "300px"
+                        },
+                        "heading": "Mobile POS Systems",
+                        "description": "Equip sales staff with mobile POS devices to process transactions anywhere in the showroom, enhancing the customer's purchasing experience."
+                    }
+                ]
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "CardMergeSection"
+        },
+        {
+            "url": "/images/fashion2.png",
+            "iconUrl": "/images/customericon.png",
+            "styles": {
+                "backgroundColor": "#D1ECFD",
+                "imageCardbackgroundColor": "#D1ECFD",
+                "borderRadius": "16px",
+                "padding": "20px",
+                "marginTop": "25px",
+                "maxWidth": "300px"
+            },
+            "heading": "Customer Insights",
+            "description": "Utilize our Customer Data Platform to gain insights into fashion trends and customer preferences."
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Inventory Control",
+                "imageUrl": "/images/inventory home.png",
+                "features": [
+                    {
+                        "icon": "/icons/inventory-icon.png",
+                        "title": "Real-Time Stock Monitoring",
+                        "description": "Keep track of large item inventory with RFID and barcode technology.",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/sales-icon.png",
+                        "title": "Efficient Order Processing",
+                        "description": "Streamline order fulfillment, from purchase to delivery scheduling.",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/customer-icon.png",
+                        "title": "Supplier Integration",
+                        "description": "Coordinate effectively with suppliers for timely stock replenishment",
+                        "componentType": "FeatureItem"
+                    }
+                ],
+                "subtitle": "Manage large and diverse inventories with ease and precision"
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "LeftImageRightText"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Building Customer Relationships",
+                "subtitle": "Foster strong connections through personalized service and loyalty programs.",
+                "images": [
+                    {
+                        "url": "/images/furnishing roundimg1.png",
+                        "styles": {
+                            "borderRadius": "10px",
+                            "height": "200px",
+                            "width": "200px"
+                        },
+                        "heading": "Custom Services",
+                        "description": "Offer tailored services to enhance customer engagement."
+                    },
+                    {
+                        "url": "/images/furnishing roundimg2.png",
+                        "styles": {
+                            "borderRadius": "10px",
+                            "height": "200px",
+                            "width": "200px"
+                        },
+                        "heading": "Post Purchase Support",
+                        "description": "Provide exemplary after-sales services, including assembly assistance and care tips."
+                    },
+                    {
+                        "url": "/images/furnishing roundimg3.png",
+                        "styles": {
+                            "borderRadius": "10px",
+                            "height": "200px",
+                            "width": "200px"
+                        },
+                        "heading": "Loyalty Rewards",
+                        "description": "Implement a rewards program tailored to frequent furniture buyers."
+                    }
+                ]
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "RoundImgSection"
+        },
+        {
+            "props": {
+                "layout": "slider"
+            },
+            "content": {
+                "testimonials": [
+                    {
+                        "quote": "Thanks to this software, we've seen remarkable improvements in our retail operations.",
+                        "author": "Alex Johnson",
+                        "company": "RetailWorld",
+                        "position": "CEO"
+                    },
+                    {
+                        "quote": "Our inventory management has never been more accurate and easy to handle.",
+                        "author": "Samantha Smith",
+                        "company": "The Fashion Hub",
+                        "position": "Operations Manager"
+                    }
+                ]
+            },
+            "styling": {},
+            "sectionType": "TestimonialsSection"
+        },
+        {
+            "props": {
+                "method": "POST",
+                "formAction": "/submit-contact"
+            },
+            "content": {
+                "title": "Talk to us",
+                "subtitle": "We are here to assist you with any issues or queries you may have",
+                "components": [
+                    {
+                        "props": {
+                            "name": "name",
+                            "type": "text",
+                            "placeholder": "Your Name"
+                        },
+                        "componentType": "TextField"
+                    },
+                    {
+                        "props": {
+                            "name": "email",
+                            "type": "email",
+                            "placeholder": "Your Email"
+                        },
+                        "componentType": "TextField"
+                    },
+                    {
+                        "props": {
+                            "name": "message",
+                            "placeholder": "Your Message"
+                        },
+                        "componentType": "TextArea"
+                    },
+                    {
+                        "props": {
+                            "type": "submit",
+                            "label": "Send Message"
+                        },
+                        "styling": {
+                            "color": "#ffffff",
+                            "backgroundColor": "#FAB005"
+                        },
+                        "componentType": "Button"
+                    }
+                ]
+            },
+            "styling": {
+                "textColor": "#ffffff",
+                "backgroundColor": "#0047AB"
+            },
+            "sectionType": "ContactFormSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "Data": [
+                    {
+                        "questions": " How does CW Suite streamline inventory management for large and bulky items in furniture stores? ",
+                        "answer": "CW Suite provides robust inventory management tools specifically designed to handle large and bulky items. Features include real-time tracking, automated stock replenishment, and spatial inventory management, ensuring that furniture and home furnishings are well-organized and easy to locate within the store or warehouse."
+                    },
+                    {
+                        "questions": "How does CW Suite facilitate omnichannel sales for furniture and home furnishings retailers? ",
+                        "answer": "CW Suite seamlessly integrates online and offline sales channels, enabling furniture and home furnishings retailers to manage a cohesive inventory and sales approach across all platforms. Customers can browse products online, place orders, and choose between home delivery or in-store pickup, creating a flexible and unified shopping experience."
+                    },
+                    {
+                        "questions": "How does CW Suite optimize inventory management for furniture and home furnishings stores? ",
+                        "answer": " CW Suite offers specialized inventory management systems designed for the unique needs of furniture stores, including features for tracking large and bulky items, managing stock levels in real-time, and automating replenishment processes to ensure that popular items are always available."
+                    },
+                    {
+                        "questions": "What role do RFID solutions play in managing inventory in furniture stores? ",
+                        "answer": "RFID technology within CW Suite enhances inventory accuracy and efficiency by providing real-time tracking of furniture items throughout the store or warehouse. This system reduces manual counting errors, speeds up inventory audits, and improves the overall management of stock, even for large items."
+                    },
+                    {
+                        "questions": "How does the mobile POS system enhance the shopping experience in furniture and home furnishings stores? ",
+                        "answer": "The mobile POS system in CW Suite allows sales staff to process transactions anywhere on the floor, reducing wait times for customers. This flexibility is particularly beneficial in large furniture stores, enabling staff to finalize sales beside the product, which enhances customer convenience and improves sales efficiency."
+                    }
+                ],
+                "title": "FAQS",
+                "subtitle": "Frequently asked questions"
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "FaqSection"
+        }
+    ],
+    "pageTitle": "Retail Software Solutions",
+    "pageDescription": "Comprehensive retail management software designed for modern businesses."
+}

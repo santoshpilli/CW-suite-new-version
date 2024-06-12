@@ -1,0 +1,272 @@
+{
+    "sections": [
+        {
+            "props": {
+                "layout": "centered",
+                "backgroundImage": "/images/grocery hero.webp"
+            },
+            "content": {
+                "title": "Fresh Perspectives on Grocery Retail",
+                "subtitle": "Deliver freshness faster with CW Suite's grocery-centric tech—streamlining operations from farm to checkout",
+                "components": [
+                    {
+                        "props": {
+                            "link": "/features",
+                            "label": "Contact Sales",
+                            "buttonStyle": "primary"
+                        },
+                        "styling": {
+                            "color": "#ffffff",
+                            "backgroundColor": "#FAB005"
+                        },
+                        "componentType": "Button"
+                    }
+                ]
+            },
+            "styling": {
+                "textColor": "#ffffff",
+                "backgroundColor": "#0047AB"
+            },
+            "sectionType": "HeroSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "All-Aisle Excellence",
+                "subtitle": "Improve the in-store experience with a suite of retail technologies, from Point of Sale to Clienteling",
+                "cards": [
+                    {
+                        "url": "/images/advancedpos.png",
+                        "iconUrl": "/images/advancedposicon.png",
+                        "styles": {
+                            "backgroundColor": "#DBECE5",
+                            "imageCardbackgroundColor": "#DBECE5",
+                            "borderRadius": "16px",
+                            "padding": "20px",
+                            "marginTop": "25px",
+                            "maxWidth": "300px"
+                        },
+                        "heading": "Advanced POS",
+                        "description": "Incorporate Point of Sale and Mobile POS for fast, efficient checkouts."
+                    },
+                    {
+                        "url": "/images/selfcheckout.png",
+                        "iconUrl": "/images/selfcheckouticon.png",
+                        "styles": {
+                            "backgroundColor": "#D1ECFD",
+                            "imageCardbackgroundColor": "#D1ECFD",
+                            "borderRadius": "16px",
+                            "padding": "20px",
+                            "marginTop": "25px",
+                            "maxWidth": "300px"
+                        },
+                        "heading": "Self Checkout Convenience",
+                        "description": "Offer Self-Checkout and Scan & Go solutions to reduce wait times and enhance customer autonomy."
+                    },
+                    {
+                        "url": "/images/multifunctional.png",
+                        "iconUrl": "/images/staffempowericon.png",
+                        "styles": {
+                            "backgroundColor": "#FFF3EA",
+                            "imageCardbackgroundColor": "#FFF3EA",
+                            "borderRadius": "16px",
+                            "padding": "20px",
+                            "marginTop": "25px",
+                            "maxWidth": "300px"
+                        },
+                        "heading": "Staff Empowerment Tools",
+                        "description": "Deploy My Store app for staff management, scheduling, and empowerment, ensuring teams deliver exceptional service."
+                    }
+                ]
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "CardMergeSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Efficiency in Every Aisle",
+                "imageUrl": "/images/grocery efficiency.png",
+                "features": [
+                    {
+                        "icon": "/icons/inventory-icon.png",
+                        "title": "RFID for Efficiency",
+                        "description": "Implement RFID Solutions for real-time inventory tracking and management.",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/sales-icon.png",
+                        "title": "Seamless Procurement",
+                        "description": "Simplify procurement and replenishment with sophisticated Order Management Systems.",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/customer-icon.png",
+                        "title": "Waste Reduction Analytics",
+                        "description": "Apply predictive analytics to forecast demand more accurately and minimize waste.",
+                        "componentType": "FeatureItem"
+                    }
+                ],
+                "subtitle": "Keep your shelves and digital inventory in perfect harmony with advanced supply chain and stock management systems."
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "LeftImageRightText"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Digital Aisles Meeting Virtual Carts",
+                "subtitle": "Bridge the gap between aisles and online shopping carts with seamless e-commerce solutions.",
+                "images": [
+                    {
+                        "url": "/images/grocery roundimg1.png",
+                        "styles": {
+                            "borderRadius": "10px",
+                            "height": "200px",
+                            "width": "200px"
+                        },
+                        "heading": "E-commerce Integration",
+                        "description": "Connect physical stores to the digital realm, ensuring product consistency across channels."
+                    },
+                    {
+                        "url": "/images/grocery roundimg2.png",
+                        "styles": {
+                            "borderRadius": "10px",
+                            "height": "200px",
+                            "width": "200px"
+                        },
+                        "heading": "Click and Collect",
+                        "description": "Smooth Click & Collect services enhance customer convenience with easy online ordering and in-store pickup."
+                    },
+                    {
+                        "url": "/images/grocery roundimg3.png",
+                        "styles": {
+                            "borderRadius": "10px",
+                            "height": "200px",
+                            "width": "200px"
+                        },
+                        "heading": "Shopping App Features",
+                        "description": "Maintain recipes, lists, and nutritional info to enhance the shopping experience."
+                    }
+                ]
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "RoundImgSection"
+        },
+        {
+            "props": {
+                "layout": "slider"
+            },
+            "content": {
+                "testimonials": [
+                    {
+                        "quote": "Thanks to this software, we've seen remarkable improvements in our retail operations.",
+                        "author": "Alex Johnson",
+                        "company": "RetailWorld",
+                        "position": "CEO"
+                    },
+                    {
+                        "quote": "Our inventory management has never been more accurate and easy to handle.",
+                        "author": "Samantha Smith",
+                        "company": "The Fashion Hub",
+                        "position": "Operations Manager"
+                    }
+                ]
+            },
+            "styling": {},
+            "sectionType": "TestimonialsSection"
+        },
+        {
+            "props": {
+                "method": "POST",
+                "formAction": "/submit-contact"
+            },
+            "content": {
+                "title": "Talk to us",
+                "subtitle": "We are here to assist you with any issues or queries you may have",
+                "components": [
+                    {
+                        "props": {
+                            "name": "name",
+                            "type": "text",
+                            "placeholder": "Your Name"
+                        },
+                        "componentType": "TextField"
+                    },
+                    {
+                        "props": {
+                            "name": "email",
+                            "type": "email",
+                            "placeholder": "Your Email"
+                        },
+                        "componentType": "TextField"
+                    },
+                    {
+                        "props": {
+                            "name": "message",
+                            "placeholder": "Your Message"
+                        },
+                        "componentType": "TextArea"
+                    },
+                    {
+                        "props": {
+                            "type": "submit",
+                            "label": "Send Message"
+                        },
+                        "styling": {
+                            "color": "#ffffff",
+                            "backgroundColor": "#FAB005"
+                        },
+                        "componentType": "Button"
+                    }
+                ]
+            },
+            "styling": {
+                "textColor": "#ffffff",
+                "backgroundColor": "#0047AB"
+            },
+            "sectionType": "ContactFormSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "Data": [
+                    {
+                        "questions": "How does CW Suite help grocery stores manage inventory effectively?   ",
+                        "answer": "CW Suite offers advanced inventory management tools that provide real-time updates on stock levels, automate replenishment, and ensure that perishable goods are managed efficiently to reduce waste and increase freshness."
+                    },
+                    {
+                        "questions": "Can CW Suite support online grocery shopping and in-store pickup services?   ",
+                        "answer": "Absolutely. CW Suite facilitates seamless integration of online shopping with in-store operations, allowing customers to place orders online and pick them up in-store at their convenience, enhancing the shopping experience and increasing operational efficiency."
+                    },
+                    {
+                        "questions": "Does CW Suite provide solutions for personalized customer engagement in grocery stores?   ",
+                        "answer": "Yes, our software includes features for personalized customer engagement such as targeted promotions based on shopping preferences and history, loyalty program management, and customized communication via email or SMS, fostering stronger customer relationships."
+                    },
+                    {
+                        "questions": "How does CW Suite enhance the checkout process for grocery stores?  ",
+                        "answer": "CW Suite streamlines the checkout process by offering solutions like self-checkout systems and mobile POS, which reduce wait times, improve customer throughput, and provide a more convenient checkout experience for shoppers."
+                    },
+                    {
+                        "questions": "Can CW Suite integrate with existing grocery store systems?   ",
+                        "answer": "Yes, CW Suite is designed to seamlessly integrate with existing grocery store systems, including POS systems, e-commerce platforms, and supply chain management tools. This integration helps maintain continuity, accuracy, and efficiency across all facets of grocery retail management."
+                    }
+                ],
+                "title": "FAQS",
+                "subtitle": "Frequently asked questions"
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "FaqSection"
+        }
+    ],
+    "pageTitle": "Retail Software Solutions",
+    "pageDescription": "Comprehensive retail management software designed for modern businesses."
+}

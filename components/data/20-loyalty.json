@@ -1,0 +1,286 @@
+{
+    "sections": [
+        {
+            "props": {
+                "layout": "centered",
+                "backgroundImage": "/images/loyalty hero.webp"
+            },
+            "content": {
+                "title": "Building Deeper Connections Through CW Loyalty",
+                "subtitle": "Elevate your brand engagement with the CW Loyalty app, designed to deepen customer relationships and enhance their loyalty through innovative and interactive features.",
+                "components": [
+                    {
+                        "props": {
+                            "link": "/features",
+                            "label": "Contact Sales",
+                            "buttonStyle": "primary"
+                        },
+                        "styling": {
+                            "color": "#ffffff",
+                            "backgroundColor": "#FAB005"
+                        },
+                        "componentType": "Button"
+                    }
+                ]
+            },
+            "styling": {
+                "textColor": "#ffffff",
+                "backgroundColor": "#0047AB"
+            },
+            "sectionType": "HeroSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Engage and Reward with Every Tap",
+                "subtitle": "Transform customer loyalty with cutting-edge app capabilities",
+                "cards": [
+                    {
+                        "url": "/images/digitaloyalty.png",
+                        "backgroundImage": "/images/loyaltybg.png",
+                        "iconUrl": null,
+                        "styles": {
+                            "backgroundColor": "#DBECE5",
+                            "imageCardbackgroundColor": "#DBECE5",
+                            "borderRadius": "16px",
+                            "padding": "20px",
+                            "marginTop": "25px",
+                            "maxWidth": "340px"
+                        },
+                        "heading": "Digital Loyalty Card",
+                        "description": "Replace traditional plastic cards with a convenient, in-app digital loyalty card, easily accessible and always at hand."
+                    },
+                    {
+                        "url": "/images/personalizedmessage.png",
+                        "iconUrl": null,
+                        "styles": {
+                            "backgroundColor": "#FFF3EA",
+                            "imageCardbackgroundColor": "#FFF3EA",
+                            "borderRadius": "16px",
+                            "padding": "20px",
+                            "marginTop": "25px",
+                            "maxWidth": "340px"
+                        },
+                        "heading": "personalized Messaging",
+                        "description": "Engage customers with custom messages about loyalty points, order statuses, and exclusive offers."
+                    },
+                    {
+                        "url": "/images/vouchervariety.png",
+                        "iconUrl": null,
+                        "styles": {
+                            "backgroundColor": "#CBD1E5",
+                            "imageCardbackgroundColor": "#CBD1E5",
+                            "borderRadius": "16px",
+                            "padding": "20px",
+                            "marginTop": "25px",
+                            "maxWidth": "340px"
+                        },
+                        "heading": "Voucher Variety",
+                        "description": "Offer a range of vouchers, from special discounts to unique gifts, enhancing the shopping experience."
+                    },
+                    {
+                        "url": "/images/loyaltylevels.png",
+                        "iconUrl": null,
+                        "styles": {
+                            "backgroundColor": "#BEE1E6",
+                            "imageCardbackgroundColor": "#BEE1E6",
+                            "borderRadius": "16px",
+                            "padding": "20px",
+                            "marginTop": "25px",
+                            "maxWidth": "340px"
+                        },
+                        "heading": "Loyalty Levels",
+                        "description": "Support various loyalty stages, allowing customers to unlock new benefits as they engage more with your brand."
+                    }
+                ]
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0",
+                "backgroundImage": "/images/loyaltybg.png"
+            },
+            "sectionType": "FourCardSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Rewarding Your Most Valuable Customers",
+                "imageUrl": "/images/loyalty rewarding.png",
+                "features": [
+                    {
+                        "icon": "/icons/inventory-icon.png",
+                        "title": "Cart Vouchers",
+                        "description": "Integrate vouchers directly into the shopping cart for easy access and application at the point of sale.",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/sales-icon.png",
+                        "title": "Long Term Incentive Vouchers",
+                        "description": "Encourage continued engagement with incentive targets that unlock special rewards.",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/customer-icon.png",
+                        "title": "Discount Vouchers",
+                        "description": "Offer discounts upon reaching loyalty milestones, delivering immediate value to your loyal customers.",
+                        "componentType": "FeatureItem"
+                    },
+                    {
+                        "icon": "/icons/customer-icon.png",
+                        "title": "Free Product Vouchers",
+                        "description": "Provide special rewards like limited edition items or free products to celebrate customer loyalty.",
+                        "componentType": "FeatureItem"
+                    }
+                ],
+                "subtitle": "Create a loyalty program that truly appreciates and rewards customer dedication"
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "FeatureSectionRightText"
+        },
+        {
+            "props": {},
+            "content": {
+                "title": "Engage with Personal Touch",
+                "subtitle": "Strengthen customer relationships with personalized and timely communication",
+                "images": [
+                    {
+                        "url": "/images/loyalty roundimg1.png",
+                        "styles": {
+                            "borderRadius": "10px",
+                            "height": "200px",
+                            "width": "200px"
+                        },
+                        "heading": "Targeted Push Notifications",
+                        "description": "Utilize push APIs to send bespoke messages, keeping customers informed about their rewards and new offers."
+                    },
+                    {
+                        "url": "/images/loyalty roundimg2.png",
+                        "styles": {
+                            "borderRadius": "10px",
+                            "height": "200px",
+                            "width": "200px"
+                        },
+                        "heading": "Order and Reward Updates",
+                        "description": "Keep customers updated on their order status and reward accruals, fostering a sense of belonging and appreciation."
+                    },
+                    {
+                        "url": "/images/loyalty roundimg3.png",
+                        "styles": {
+                            "borderRadius": "10px",
+                            "height": "200px",
+                            "width": "200px"
+                        },
+                        "heading": "Direct Customer Feedback",
+                        "description": "Encourage customers to share their experiences and feedback directly through the app, fostering a two-way relationship."
+                    }
+                ]
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "RoundImgSection"
+        },
+        {
+            "props": {
+                "layout": "slider"
+            },
+            "content": {
+                "testimonials": [
+                    {
+                        "quote": "Thanks to this software, we've seen remarkable improvements in our retail operations.",
+                        "author": "Alex Johnson",
+                        "company": "RetailWorld",
+                        "position": "CEO"
+                    },
+                    {
+                        "quote": "Our inventory management has never been more accurate and easy to handle.",
+                        "author": "Samantha Smith",
+                        "company": "The Fashion Hub",
+                        "position": "Operations Manager"
+                    }
+                ]
+            },
+            "styling": {},
+            "sectionType": "TestimonialsSection"
+        },
+        {
+            "props": {
+                "method": "POST",
+                "formAction": "/submit-contact"
+            },
+            "content": {
+                "title": "Talk to us",
+                "subtitle": "We are here to assist you with any issues or queries you may have",
+                "components": [
+                    {
+                        "props": {
+                            "name": "name",
+                            "type": "text",
+                            "placeholder": "Your Name"
+                        },
+                        "componentType": "TextField"
+                    },
+                    {
+                        "props": {
+                            "name": "email",
+                            "type": "email",
+                            "placeholder": "Your Email"
+                        },
+                        "componentType": "TextField"
+                    },
+                    {
+                        "props": {
+                            "name": "message",
+                            "placeholder": "Your Message"
+                        },
+                        "componentType": "TextArea"
+                    },
+                    {
+                        "props": {
+                            "type": "submit",
+                            "label": "Send Message"
+                        },
+                        "styling": {
+                            "color": "#ffffff",
+                            "backgroundColor": "#FAB005"
+                        },
+                        "componentType": "Button"
+                    }
+                ]
+            },
+            "styling": {
+                "textColor": "#ffffff",
+                "backgroundColor": "#0047AB"
+            },
+            "sectionType": "ContactFormSection"
+        },
+        {
+            "props": {},
+            "content": {
+                "Data": [
+                    {
+                        "questions": "How does CW Loyalty enhance customer engagement?",
+                        "answer": "It offers a seamless digital loyalty experience with personalized features and rewards, increasing customer engagement and brand loyalty."
+                    },
+                    {
+                        "questions": "Can customers access their loyalty information easily in the app?",
+                        "answer": "Yes, customers can view their loyalty points, vouchers, and levels directly in the app, providing easy and instant access."
+                    },
+                    {
+                        "questions": "What types of vouchers does CW Loyalty offer?",
+                        "answer": "The app offers various types of vouchers, including discount, long-term incentive, and free product vouchers, to reward customers in different ways."
+                    }
+                ],
+                "title": "FAQS",
+                "subtitle": "Frequently asked questions"
+            },
+            "styling": {
+                "backgroundColor": "#f0f0f0"
+            },
+            "sectionType": "FaqSection"
+        }
+    ],
+    "pageTitle": "Retail Software Solutions",
+    "pageDescription": "Comprehensive retail management software designed for modern businesses."
+}
