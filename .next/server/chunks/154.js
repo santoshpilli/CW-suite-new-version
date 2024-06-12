@@ -1,0 +1,1 @@
+"use strict";exports.id=154,exports.ids=[154],exports.modules={7154:(e,s,t)=>{t.r(s),t.d(s,{default:()=>d});var r=t(997);t(6689);let d=()=>r.jsx("h2",{children:"About pages"})}};

@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[941],{3376:function(n,u,r){(window.__NEXT_P=window.__NEXT_P||[]).push(["/order",function(){return r(6970)}])},6970:function(n,u,r){"use strict";r.r(u);var _=r(5893);r(7294),u.default=()=>(0,_.jsx)("div",{children:"order"})}},function(n){n.O(0,[888,774,179],function(){return n(n.s=3376)}),_N_E=n.O()}]);
