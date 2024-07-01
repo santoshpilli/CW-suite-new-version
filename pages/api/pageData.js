@@ -1,17 +1,28 @@
-import fs from 'fs/promises';
-import path from 'path';
 
-
+import axios from 'axios';
 export default async function handler(req, res) {
-  const { menuId } = req.query;
-  try {
-    const { menuId } = req.query;
-    const filePath = path.join(process.cwd(), 'components', 'data', `${menuId}.json`);
-    const jsonData = await fs.readFile(filePath, 'utf-8');
+  const { slug } = req.query;
+  const finaldata = {
+    database: 'cw_sites',
+    collection: 'pages',
+    dataSource: 'Cluster0',
+    filter: {
+      site_id: process.env.SITE_ID,
+      slug1: slug
+    }
+  };
 
-    const parsedData = JSON.parse(jsonData);
-    res.status(200).json(parsedData);
+  try {
+    const axiosResponse = await axios.post(`${process.env.MONGO_DB_URL}/find`, finaldata, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Request-Headers': '*',
+        'api-key': `${process.env.MONGO_DB_APIKEY}`
+      },
+    });
+    res.status(200).json(axiosResponse.data);
   } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
+    console.log('catch error', error);
+    res.status(500).json({ error: 'Failed to submit data: ' + error.message });
   }
 }

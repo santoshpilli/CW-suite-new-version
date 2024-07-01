@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[154],{7154:function(e,s,u){u.r(s);var a=u(5893);u(7294),s.default=()=>(0,a.jsx)("h2",{children:"About pages"})}}]);

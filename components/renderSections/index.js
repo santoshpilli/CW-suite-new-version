@@ -21,7 +21,7 @@ import FourCardSection from '../sections/FourCardSection';
 
 const RenderSections = ({ data }) => {
 
-
+    const finalData = JSON.parse(data.content)
     const renderSectionComponent = (section) => {
         switch (section.sectionType) {
             case 'HeroSection':
@@ -63,7 +63,7 @@ const RenderSections = ({ data }) => {
 
     return (
         <Layout>
-            {data?.sections?.map((section, index) => (
+            {finalData?.sections?.map((section, index) => (
                 <React.Fragment key={index}>
                     {renderSectionComponent(section)}
                 </React.Fragment>

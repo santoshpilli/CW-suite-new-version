@@ -63,7 +63,7 @@ const Hero = ({ data }) => {
     router.push("/resources/contact");
   };
 
-
+  console.log("data in hero section=============>", data)
 
   const containerVariants = {
     hidden: { opacity: 0 },
