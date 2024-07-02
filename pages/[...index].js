@@ -1,23 +1,22 @@
 
-import React from "react";
-import PageSEO from "../components/common/PageSEO";
-import { MetaData } from "../components/common/Helper";
-import RenderSections from "../components/renderSections";
-// import menuData from './menudata.json'
-import menuData from './menu.json'
-import LoadingAnimation from "../custom/animate";
+// import React from "react";
+// import PageSEO from "../components/common/PageSEO";
+// import { MetaData } from "../components/common/Helper";
+// import RenderSections from "../components/renderSections";
+// // import menuData from './menudata.json'
+// import menuData from './menu.json'
+// import LoadingAnimation from "../custom/animate";
 
-import Layout from "../hoc/Layout";
-import axios from "axios";
-import Custom404 from "./404"
-import CustomPages from "../custom";
-
+// import Layout from "../hoc/Layout";
+// import axios from "axios";
+// import Custom404 from "./404"
+// import CustomPages from "../custom";
 
 // export async function getServerSideProps(context) {
 //   const { query } = context;
 //   const pathSegments = query.index || [];
 //   const path = `/${pathSegments.join("/")}`;
-//   console.log('path==========>', path)
+
 
 //   let matchedMenuItem = null;
 //   for (const menuItem of menuData) {
@@ -49,10 +48,12 @@ import CustomPages from "../custom";
 //     }
 //   }
 //   const { type, menuId, slug } = matchedMenuItem || {};
-//   // console.log("================>", type)
-//   // console.log("================>", menuId)
-//   // console.log("================>", slug)
 
+//   if (!matchedMenuItem) {
+//     return {
+//       notFound: true,
+//     };
+//   }
 
 //   if (type === 'custom') {
 //     return {
@@ -64,47 +65,43 @@ import CustomPages from "../custom";
 //     };
 //   } else {
 //     try {
-//       // console.log("in else block============")
 //       let tempSlug = path.substring(1);
-//       console.log("tempSlug==============>", tempSlug)
+
 //       const finalUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/api/pageData?slug=${tempSlug}`;
 //       const headers = {
 //         'Content-Type': 'application/json',
 //       };
-//       // console.log("before axios============", )
 //       const response = await axios.get(finalUrl, headers);
-//       console.log("response=============>", response.data?.documents[0])
-//       // let data = null
-//       // setTimeout(() => {
-//       // const data = response.data;
-//       const data = response.data?.documents[0]
 
-//       // }, 3000);
+//       const data = response.data?.documents[0];
+
+//       if (!data) {
+//         return {
+//           notFound: true,
+//         };
+//       }
 
 //       return {
 //         props: {
 //           type,
 //           data,
 //           slug
-
 //         },
 //       };
 //     } catch (error) {
 //       console.error('Error fetching data:', error);
 //       return {
-//         props: {
-//           data: null,
-//           type: null,
-//           slug: null
-
-//         },
+//         notFound: true,
 //       };
 //     }
 //   }
 // }
 
+
 // export default function Home({ type, data, slug }) {
-//   // const canonicalTag = `${process.env.NEXT_PUBLIC_FRONTEND_URL}`;
+//   if (!data && type !== 'custom') {
+//     return <Custom404 />;
+//   }
 
 //   return (
 //     <>
@@ -115,11 +112,9 @@ import CustomPages from "../custom";
 //         metaDes={MetaData[0].metaDescription}
 //       />
 
-
 //       {data === null && type === "page" ? <Layout> <LoadingAnimation /> </Layout> :
 //         type === 'page' && <RenderSections data={data} />
 //       }
-//       {/* {type === 'page' && <RenderSections data={data} />} */}
 
 //       {type === 'post' && <PostComponent />}
 //       {type === 'form' && <Layout><h2>Form component</h2></Layout>}
@@ -130,12 +125,32 @@ import CustomPages from "../custom";
 // }
 
 
-export async function getServerSideProps(context) {
-  const { query } = context;
-  const pathSegments = query.index || [];
-  const path = `/${pathSegments.join("/")}`;
 
 
+import React from "react";
+import useSWR from "swr";
+import PageSEO from "../components/common/PageSEO";
+import { MetaData } from "../components/common/Helper";
+import RenderSections from "../components/renderSections";
+import menuData from './menu.json';
+import LoadingAnimation from "../custom/animate";
+import Layout from "../hoc/Layout";
+import Custom404 from "./404";
+import CustomPages from "../custom";
+import axios from "axios";
+
+
+const fetcher = async (url) => {
+  const response = await axios.get(url, {
+    headers: { 'Content-Type': 'application/json' },
+  });
+  if (!response.data || !response.data.documents[0]) {
+    throw new Error('No data found');
+  }
+  return response.data.documents[0];
+};
+
+const findMenuItem = (path) => {
   let matchedMenuItem = null;
   for (const menuItem of menuData) {
     if (menuItem.slug === path) {
@@ -165,59 +180,44 @@ export async function getServerSideProps(context) {
       }
     }
   }
-  const { type, menuId, slug } = matchedMenuItem || {};
+  return matchedMenuItem;
+};
 
-  if (!matchedMenuItem) {
-    return {
-      notFound: true,
-    };
-  }
+export async function getServerSideProps(context) {
+  const { query } = context;
+  const pathSegments = query.index || [];
+  const path = `/${pathSegments.join("/")}`;
 
-  if (type === 'custom') {
-    return {
-      props: {
-        type,
-        data: null,
-        slug
-      },
-    };
-  } else {
-    try {
-      let tempSlug = path.substring(1);
 
-      const finalUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/api/pageData?slug=${tempSlug}`;
-      const headers = {
-        'Content-Type': 'application/json',
-      };
-      const response = await axios.get(finalUrl, headers);
+  const matchedMenuItem = findMenuItem(path);
+  
 
-      const data = response.data?.documents[0];
+  const { type, slug } = matchedMenuItem || {};
 
-      if (!data) {
-        return {
-          notFound: true,
-        };
-      }
-
-      return {
-        props: {
-          type,
-          data,
-          slug
-        },
-      };
-    } catch (error) {
-      console.error('Error fetching data:', error);
-      return {
-        notFound: true,
-      };
-    }
-  }
+  return {
+    props: {
+      path,
+      type,
+      slug,
+      matchedMenuItem,
+    },
+  };
 }
 
+export default function Home({ path, type, slug, matchedMenuItem }) {
+  const { data, error } = useSWR(
+    matchedMenuItem && type !== 'custom' ? `${process.env.NEXT_PUBLIC_BASE_URL}/api/pageData?slug=${path.substring(1)}` : null,
+    fetcher
+  );
 
-export default function Home({ type, data, slug }) {
-  if (!data && type !== 'custom') {
+ 
+
+  if (!matchedMenuItem) {
+    return <Custom404 />;
+  }
+
+  if (error) {
+    console.error('Error fetching data:', error);
     return <Custom404 />;
   }
 
@@ -230,17 +230,20 @@ export default function Home({ type, data, slug }) {
         metaDes={MetaData[0].metaDescription}
       />
 
-      {data === null && type === "page" ? <Layout> <LoadingAnimation /> </Layout> :
+      {!data && type === "page" ? <Layout> <LoadingAnimation /> </Layout> :
         type === 'page' && <RenderSections data={data} />
       }
 
       {type === 'post' && <PostComponent />}
       {type === 'form' && <Layout><h2>Form component</h2></Layout>}
       {type === 'custom' && <CustomPages type={type} slug={slug} />}
-      {data === null && type !== 'custom' && <Custom404 />}
+      {!data && type !== 'custom' && <Custom404 />}
     </>
   );
 }
+
+
+
 
 
 
