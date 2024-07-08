@@ -2,6 +2,9 @@
 import axios from 'axios';
 export default async function handler(req, res) {
   const { slug } = req.query;
+  console.log("calling=======in api")
+  console.log("calling=======in slug")
+
   const finaldata = {
     database: 'cw_sites',
     collection: 'pages',
