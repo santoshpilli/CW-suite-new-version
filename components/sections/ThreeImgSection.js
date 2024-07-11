@@ -136,8 +136,9 @@ const ThreeImgSection = (data) => {
                                             alt="clientelling img"
                                         />
                                     </div>
-                                    <div className="flex items-center">
-                                        <h5 className="ml-2 ff-Inter text-center mt-[12px] sm:mt-3 font-bold text-[20px] lg:text-[22px] text-darkBlack">
+
+                                    <div className="text-center mt-[5px] sm:mt-2]">
+                                        <h5 className="ff-inter  text-darkBlack font-bold text-center leading-[22px] sm:leading-[28px] max-w-[284px]  text-[20px] lg:text-[22px]  ">
                                             {dat.heading}
                                         </h5>
                                     </div>
@@ -149,6 +150,10 @@ const ThreeImgSection = (data) => {
                                 </div>
                             ))}
                         </div>
+
+
+
+
                     </div>
                 </div>
             </section>
