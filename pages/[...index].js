@@ -13,7 +13,7 @@ import CustomPages from "../custom";
 
 export async function getStaticPaths() {
   const paths = menuData.map(menuItem => {
-    
+
     const paths = [];
     if (menuItem.children) {
       menuItem.children.forEach(childItem => {
@@ -73,13 +73,13 @@ export async function getStaticProps(context) {
       }
     }
   }
- 
+
 
   const { type, menuId, slug } = matchedMenuItem || {};
-  
+
 
   if (!matchedMenuItem) {
-  
+
     return {
       notFound: true,
     };
@@ -92,20 +92,20 @@ export async function getStaticProps(context) {
         data: null,
         slug
       },
-      revalidate: 86400, // Revalidate every 24 hours
+      revalidate: 300, // Revalidate every 24 hours
     };
   } else {
     try {
-     
+
       let tempSlug = path.substring(1);
-    
+
       const finalUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/api/pageData?slug=${tempSlug}`;
       const headers = {
         'Content-Type': 'application/json',
       };
-  
+
       const response = await axios.get(finalUrl, headers);
-    
+
       const data = response.data?.documents[0];
 
       if (!data) {
@@ -120,13 +120,13 @@ export async function getStaticProps(context) {
           data,
           slug
         },
-        revalidate: 86400, // Revalidate every 24 hours
+        revalidate: 300, // Revalidate every 24 hours
       };
     } catch (error) {
       console.error('Error fetching data:', error);
       return {
         notFound: true,
-        revalidate: 86400, // Revalidate every 24 hours
+        revalidate: 300, // Revalidate every 24 hours
       };
     }
   }
@@ -242,7 +242,7 @@ export default function Home({ type, data, slug }) {
 //         data: null,
 //         slug
 //       },
-//       revalidate: 86400, 
+//       revalidate: 86400,
 //     };
 //   } else {
 //     try {
@@ -273,7 +273,7 @@ export default function Home({ type, data, slug }) {
 //       console.error('Error fetching data:', error);
 //       return {
 //         notFound: true,
-//         revalidate: 86400, 
+//         revalidate: 86400,
 //       };
 //     }
 //   }
