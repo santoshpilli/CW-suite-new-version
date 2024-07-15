@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     dataSource: 'Cluster0',
     filter: {
       site_id: process.env.SITE_ID,
-    //   slug1: slug
+      //   slug1: slug
     }
   };
 
@@ -24,6 +24,7 @@ export default async function handler(req, res) {
     res.status(200).json(axiosResponse.data);
   } catch (error) {
     console.log('catch error', error);
+
     res.status(500).json({ error: 'Failed to submit data: ' + error.message });
   }
 }

@@ -1,4 +1,4 @@
-// Without Animation Code 
+// Without Animation Code
 // import Image from "next/image";
 // import Link from "next/link";
 // // import menuData from "../../pages/menudata.json"
@@ -115,7 +115,7 @@
 // export default Navbar;
 
 
-//With Animation code 
+//With Animation code
 
 // import Image from "next/image";
 // import Link from "next/link";
@@ -126,7 +126,8 @@
 // import React, { useEffect, useState } from "react";
 // import { ToggleIcon } from "../common/Icons";
 
-// const Navbar = ({ setSidebarOpen }) => {
+// const Navbar = ({ setSidebarOpen, isSidebarOpen }) => {
+//   console.log(setSidebarOpen, 'sksldksdlkewewee')
 //   const [activeParent, setActiveParent] = useState(null);
 //   const [activeChild, setActiveChild] = useState(null);
 
@@ -281,7 +282,7 @@
 //           <div className="lg:hidden flex"></div>
 //           <span
 //             className="lg:hidden cursor-pointer"
-//             onClick={() => setSidebarOpen(true)}
+//             onClick={() => setSidebarOpen(!isSidebarOpen)}
 //           >
 //             {" "}
 //             <ToggleIcon />
@@ -298,7 +299,7 @@
 
 
 
-"use client"
+// "use client"
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -307,8 +308,8 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { ToggleIcon } from "../common/Icons";
 
-const Navbar = ({ setSidebarOpen }) => {
-  const [menuData, setMenuData] = useState([]);
+const Navbar = ({ setSidebarOpen, menuData }) => {
+  // const [menuData, setMenuData] = useState([]);
   const [activeParent, setActiveParent] = useState(null);
   const [activeChild, setActiveChild] = useState(null);
 
@@ -335,19 +336,7 @@ const Navbar = ({ setSidebarOpen }) => {
     typeof window !== "undefined" && window.pageYOffset;
   const [yOffset, setYOffset] = useState(yOffsetValue);
 
-  useEffect(() => {
-    const fetchMenuData = async () => {
-      try {
-        const response = await axios.get("/api/getmenuData");
-        const menudata = JSON.parse(response.data.documents[0].content);
-        setMenuData(menudata);
-      } catch (error) {
-        console.error("Error fetching menu data:", error);
-      }
-    };
 
-    fetchMenuData();
-  }, []);
 
   function handleScroll() {
     const currentYOffset = window.pageYOffset;
@@ -355,12 +344,12 @@ const Navbar = ({ setSidebarOpen }) => {
   }
 
   const addToRoute = (data) => {
-   
+
     router.push(data.slug);
   };
 
 
-  
+
 
   const menuVariants = {
     hidden: { opacity: 0, y: -20 },
@@ -382,9 +371,8 @@ const Navbar = ({ setSidebarOpen }) => {
   return (
     <>
       <nav
-        className={`transition-all duration-500 ease-linear px-3 xl:px-10 flex items-center bg-white py-[18px] justify-between ${
-          yOffset > 70 ? "sticky-bar top-0 sticky z-30 shadow-sm" : ""
-        }`}
+        className={`transition-all duration-500 ease-linear px-3 xl:px-10 flex items-center bg-white py-[18px] justify-between ${yOffset > 70 ? "sticky-bar top-0 sticky z-30 shadow-sm" : ""
+          }`}
         style={{ zIndex: 50 }}
       >
         <div className="max-w-[120px] sm:max-w-[170px]">
@@ -400,7 +388,7 @@ const Navbar = ({ setSidebarOpen }) => {
 
         <ul className="ff-Inter text-xs hidden lg:flex items-center justify-between text-darkBlack">
           {menuData.map((parent) => (
-            
+
             <li
               key={parent._id}
               className="mx-5 relative cursor-pointer"
@@ -493,6 +481,12 @@ const Navbar = ({ setSidebarOpen }) => {
 };
 
 export default Navbar;
+
+
+
+
+
+
 
 
 
