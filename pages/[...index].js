@@ -276,7 +276,7 @@ export async function getStaticProps(context) {
         slug,
         menuData,
       },
-      revalidate: 300, // Revalidate every 24 hours
+      revalidate: 86400 , // Revalidate every 24 hours
     };
   } else {
     try {
@@ -302,13 +302,13 @@ export async function getStaticProps(context) {
           slug,
           menuData,
         },
-        revalidate: 300, // Revalidate every 24 hours
+        revalidate: 86400, // Revalidate every 24 hours
       };
     } catch (error) {
       console.error("Error fetching data:", error);
       return {
         notFound: true,
-        revalidate: 300, // Revalidate every 24 hours
+        revalidate: 86400, // Revalidate every 24 hours
       };
     }
   }
