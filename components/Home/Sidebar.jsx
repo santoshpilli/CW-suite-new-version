@@ -547,7 +547,7 @@ import { CrossIcon2 } from "../common/Icons";
 
 
 const Sidebar = ({ isSidebarOpen, setSidebarOpen, menuData }) => {
-  console.log("Sidebar component rendered with menuData:", menuData);
+
 
   const router = useRouter();
   const [openMenus, setOpenMenus] = useState([]);
@@ -559,7 +559,7 @@ const Sidebar = ({ isSidebarOpen, setSidebarOpen, menuData }) => {
   };
 
   const handleSubMenuClick = (title) => {
-    console.log("Submenu item clicked with title:", title);
+
     if (openMenus.includes(title)) {
       setOpenMenus(openMenus.filter((menu) => menu !== title));
     } else {
@@ -568,7 +568,7 @@ const Sidebar = ({ isSidebarOpen, setSidebarOpen, menuData }) => {
   };
 
   const renderMenuItems = (items, parentTitle = "") => {
-    console.log("Rendering menu items:", items);
+
     if (!items || !Array.isArray(items)) return null;
 
     return items.map((item, index) => (

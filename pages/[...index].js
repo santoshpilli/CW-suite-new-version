@@ -219,16 +219,34 @@ export async function getStaticPaths() {
     })
     .flat();
 
+
+
   return { paths, fallback: "blocking" };
 }
 
 export async function getStaticProps(context) {
   const { params } = context;
   const pathSegments = params.index || [];
-  const path = `/${pathSegments.join("/")}`;
+  let path = `/${pathSegments.join("/")}`;
+  console.log("path==============>", path)
+
+
+  // const { params } = context;
+  // const pathSegments = params.index || [];
+  // let path = `/${pathSegments.join("/")}`;
+
+
+  // if (path === '/') {
+  //   path == '/home';
+  // }
+
+
+
+
 
   const response = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getmenuData`);
   const menuData = JSON.parse(response.data.documents[0].content);
+
 
   let matchedMenuItem = null;
   for (const menuItem of menuData) {
@@ -276,7 +294,7 @@ export async function getStaticProps(context) {
         slug,
         menuData,
       },
-      revalidate: 86400 , // Revalidate every 24 hours
+      revalidate: 300, // Revalidate every 24 hours
     };
   } else {
     try {
@@ -302,45 +320,42 @@ export async function getStaticProps(context) {
           slug,
           menuData,
         },
-        revalidate: 86400, // Revalidate every 24 hours
+        revalidate: 300, // Revalidate every 24 hours
       };
     } catch (error) {
       console.error("Error fetching data:", error);
       return {
         notFound: true,
-        revalidate: 86400, // Revalidate every 24 hours
+        revalidate: 300, // Revalidate every 24 hours
       };
     }
   }
 }
 
-export default function Home({ type, data, slug, menuData }) {
-  console.log(menuData, 'fdfkldfk')
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
-  if (!data && type !== "custom") {
-    return <Custom404 />;
-  }
 
 
+
+
+
+export default function Home({ type, data, slug }) {
 
   return (
     <>
-      <PageSEO
-        title={data?.pageTitle}
-        canonicalTag={""}
-        metatitleTag={MetaData[0].titleTag}
-        metaDes={MetaData[0].metaDescription}
-      />
+      <Layout>
+        <PageSEO
+          title={data?.pageTitle}
+          canonicalTag={""}
+          metatitleTag={MetaData[0].titleTag}
+          metaDes={MetaData[0].metaDescription}
+        />
 
-      <Layout {...{ isSidebarOpen }}>
-        <Sidebar isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} menuData={menuData} />
-        <Navbar className="sticky-bar" menuData={menuData} setSidebarOpen={setSidebarOpen} isSidebarOpen={isSidebarOpen} />
         {data === null && type === "page" ? (
 
           <LoadingAnimation />
 
 
         ) : (
+
           type === "page" && <RenderSections data={data} />
         )}
         {type === "post" && <PostComponent />}
@@ -348,18 +363,20 @@ export default function Home({ type, data, slug, menuData }) {
 
           <h2></h2>
 
+
         )}
         {type === "custom" && <CustomPages type={type} slug={slug} />}
-        {data === null && type !== "custom" && <Custom404 />}
+        {/* {type === "custom" ? <CustomPages type={type} slug={slug} /> : <Custom404 />} */}
+
+
       </Layout>
-
-
-
-
 
     </>
   );
 }
+
+
+
 
 
 

@@ -62,14 +62,14 @@ const RenderSections = ({ data }) => {
     };
 
     return (
-        <Layout>
+        <>
             {finalData?.sections?.map((section, index) => (
                 <React.Fragment key={index}>
                     {renderSectionComponent(section)}
                 </React.Fragment>
             ))}
 
-        </Layout>
+        </>
     );
 }
 
