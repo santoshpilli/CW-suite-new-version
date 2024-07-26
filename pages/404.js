@@ -2,27 +2,14 @@
 import Image from 'next/image';
 import Navbar from '../components/Home/Navbar';
 import Sidebar from '../components/Home/Sidebar';
-import { useLayoutContext } from '../components/LayoutProvider';
+// import { useLayoutContext } from '../components/LayoutProvider1';
 import Footer from '../components/common/Footer';
+import Layout from '../hoc/Layout';
 
 const Custom404 = () => {
-  const { menuData, isSidebarOpen, setSidebarOpen } = useLayoutContext();
-
-
-
   return (
     <>
-      <Navbar
-        className="sticky-bar"
-        menuData={menuData}
-        setSidebarOpen={setSidebarOpen}
-        isSidebarOpen={isSidebarOpen}
-      />
-      <Sidebar
-        menuData={menuData}
-        isSidebarOpen={isSidebarOpen}
-        setSidebarOpen={setSidebarOpen}
-      />
+      {/* <Layout> */}
       <div className="my-10 max-w-[940px] mx-auto lg:py-8 px-4 sm:px-5">
         <div className="text-center">
           <div className="flex justify-center mt-9 lg:mt-0 lg:pr-2 xl:pr-0 w-full">
@@ -36,7 +23,7 @@ const Custom404 = () => {
           </p>
         </div>
       </div>
-      <Footer />
+      {/* </Layout> */}
     </>
 
 
