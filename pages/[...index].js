@@ -514,12 +514,11 @@ export async function getStaticProps(context) {
 
 
 export default function Home({ type, data, slug }) {
-
   return (
     <>
       <Layout>
         <PageSEO
-          title={data?.pageTitle}
+          title={data?.title}
           canonicalTag={""}
           metatitleTag={MetaData[0].titleTag}
           metaDes={MetaData[0].metaDescription}

@@ -1,9 +1,9 @@
 import Head from "next/head";
 import React from "react";
 
-const PageSEO = ({ title,canonicalTag,metatitleTag,metaDes}) => {
-  const maintitle = `CW Suite — ${title}`;
-  const titleTag = `${metatitleTag}`
+const PageSEO = ({ title, canonicalTag, metatitleTag, metaDes }) => {
+  const maintitle = `CW Suite | ${title}`;
+  const titleTag = `${maintitle}`
   const metaDescription = `${metaDes}`
   const metaKeywords = "cw suite,retail saas platform, POS, inventory management, purchase management, sales management, finance management, HRMS, low-code app builder"
   const robotsMetaTags = "index, follow"

@@ -553,7 +553,7 @@ const Sidebar = ({ isSidebarOpen, setSidebarOpen, menuData }) => {
   const [openMenus, setOpenMenus] = useState([]);
 
   const handleMenuClick = (menuSlug) => {
-    console.log("Menu item clicked with slug:", menuSlug);
+
     router.push(menuSlug);
     setSidebarOpen(false);
   };
