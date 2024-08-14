@@ -495,11 +495,17 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { ToggleIcon } from "../common/Icons";
+import { LeftArrow, ToggleIcon } from "../common/Icons";
 
 const Navbar = ({ menuData, setSidebarOpen, isSidebarOpen }) => {
   const [activeParent, setActiveParent] = useState(null);
   const [activeChild, setActiveChild] = useState(null);
+
+
+  const onSignUp = () => {
+    // router.push("/pricing");
+    router.push("/resources/contact")
+  };
 
 
   const handleParentMouseEnter = (parent) => {
@@ -567,6 +573,8 @@ const Navbar = ({ menuData, setSidebarOpen, isSidebarOpen }) => {
               height={31}
               alt="LOGO"
             />
+
+
           </Link>
         </div>
 
@@ -636,18 +644,31 @@ const Navbar = ({ menuData, setSidebarOpen, isSidebarOpen }) => {
                                     {subchild.title}
                                   </button>
                                 </motion.li>
+
+
                               ))}
+
                             </ul>
                           </motion.div>
                         )}
                       </li>
                     ))}
                   </ul>
+
                 </motion.div>
+
+
               )}
             </li>
           ))}
         </ul>
+        <button
+          onClick={onSignUp}
+          className="hidden lg:flex bg-blue px-5 xl:px-5 py-3 xl:py-1.5 rounded-full text-white text-xs items-center free-trial-btn-hover transition-all duration-200 ease-in hover:shadow-lg whitespace-nowrap"
+        >
+          Contact Sales
+          <LeftArrow />
+        </button>
 
         <div className="flex items-center ff-Inter">
           <div className="lg:hidden flex"></div>
@@ -655,6 +676,8 @@ const Navbar = ({ menuData, setSidebarOpen, isSidebarOpen }) => {
             className="lg:hidden cursor-pointer"
             onClick={() => setSidebarOpen(!isSidebarOpen)}
           >
+
+
             <ToggleIcon />
           </span>
         </div>

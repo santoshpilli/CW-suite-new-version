@@ -18,6 +18,7 @@ import Custom404 from "./404";
 import CustomPages from "../custom";
 import Sidebar from "../components/Home/Sidebar";
 import Navbar from "../components/Home/Navbar";
+import ContactUs from "./resources1/contact";
 
 
 export async function getStaticPaths() {
@@ -92,6 +93,7 @@ export async function getStaticProps(context) {
     }
   }
 
+
   const { type, menuId, slug } = matchedMenuItem || {};
 
   if (!matchedMenuItem) {
@@ -113,6 +115,16 @@ export async function getStaticProps(context) {
         menuData,
       },
       revalidate: 300, // Revalidate every 24 hours
+    };
+  } else if (type === "form") {
+    return {
+      props: {
+        type,
+        data: null,
+        slug,
+        menuData,
+      },
+      revalidate: 300,
     };
   } else {
     try {
@@ -150,11 +162,22 @@ export async function getStaticProps(context) {
         revalidate: 300, // Revalidate every 24 hours
       };
     }
+
+
   }
+
 }
 
 
+
+
+
+
+
+
+
 export default function Home({ type, data, slug, menuData, notFound }) {
+
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -186,6 +209,7 @@ export default function Home({ type, data, slug, menuData, notFound }) {
 
         {notFound ? (
           <Custom404 />
+
         ) : (
           <>
             {data === null && type === "page" ? (
@@ -194,7 +218,7 @@ export default function Home({ type, data, slug, menuData, notFound }) {
               type === "page" && <RenderSections data={data} />
             )}
             {type === "post" && <PostComponent />}
-            {type === "form" && <h2></h2>}
+            {type === "form" && <ContactUs />}
             {type === "custom" && <CustomPages type={type} slug={slug} />}
           </>
         )}
@@ -203,6 +227,17 @@ export default function Home({ type, data, slug, menuData, notFound }) {
     </>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -58,12 +58,16 @@ import { motion } from "framer-motion";
 import { LeftArrow } from "../common/Icons";
 
 const Hero = ({ data }) => {
+
   const router = useRouter();
   const seePricing = () => {
-    router.push("/resources/contact");
+
+    // router.push("/contact");
+    // router.push("/ContactUs");
+    router.push("/resources/contact")
   };
 
- 
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -89,7 +93,7 @@ const Hero = ({ data }) => {
       className={`3xl:h-[768px] bg-center 2xl:bg-left bg-no-repeat bg-cover sm:h-[690px] h-[90vh]`}
       style={{
         backgroundImage: `url("${data?.props?.backgroundImage}")`,
-        backgroundColor: data?.styling?.backgroundColor,
+        backgroundColor: data?.styling?.backgroundColor
       }}
       initial="hidden"
       animate="visible"
@@ -97,14 +101,28 @@ const Hero = ({ data }) => {
     >
       <div className="max-w-[1120px] mx-auto h-full px-3 xl:px-0 flex-grow flex flex-col justify-center">
         <motion.h1
-          className="font-bold text-white text-2xl sm:text-3xl md:text-4xl leading-[40px] sm:leading-[46px] md:leading-[65px] text-center lg:text-start max-w-[750px] mx-auto lg:mx-0 w-full"
-          style={{ color: data?.styling?.textColor }}
+          className="font-bold text-white text-2xl sm:text-3xl md:text-4xl leading-[40px] sm:leading-[46px] md:leading-[65px] text-center lg:text-start max-w-[750px] mx-auto lg:mx-0 w-full  bg-gray-500 bg-opacity-50"
+          style={{
+            color: data?.styling?.textColor,
+            // backgroundColor: data?.styling?.headingBackgroundColor,
+            backgroundColor: `${data?.styling?.paragraphBackgroundColor}50`,
+
+            padding: data?.styling?.paddingRight,
+            borderRadius: data?.styling?.paragraphRadius
+          }}
           variants={itemVariants}
         >
           {data?.content?.title}
         </motion.h1>
         <motion.p
           className="text-md text-white sm:text-xl font-normal mt-[13px] mx-auto lg:mx-0 text-center lg:text-start max-w-[638px] w-full"
+          style=
+          {{
+            // backgroundColor: data?.styling?.paragraphBackgroundColor,
+            backgroundColor: `${data?.styling?.paragraphBackgroundColor}50`,
+            padding: data?.styling?.subtitlepaddingRight,
+            borderRadius: data?.styling?.paragraphRadius
+          }}
           variants={itemVariants}
         >
           {data?.content?.subtitle}

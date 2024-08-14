@@ -16,12 +16,17 @@ import BgColorImage from '../sections/BgColorImage';
 // import CardImgSection from '../sections/CardImgSection';
 import CardMergeSection from '../sections/CardMergeSection';
 import FourCardSection from '../sections/FourCardSection';
+import DescriptionSection from '../sections/DescriptionSection';
+import WhyOptSection from '../sections/WhyOptSection';
+import SliderSection from '../sections/SliderSection';
 
 
 
 const RenderSections = ({ data }) => {
 
+
     const finalData = JSON.parse(data.content)
+
     const renderSectionComponent = (section) => {
         switch (section.sectionType) {
             case 'HeroSection':
@@ -46,7 +51,12 @@ const RenderSections = ({ data }) => {
                 return <FourCardSection data={section} />;
             case 'FeatureSectionRightText':
                 return <FeaturesSectionRightText data={section} />;
-
+            case 'DescriptionSection':
+                return <DescriptionSection data={section} />;
+            case 'WhyOptSection':
+                return <WhyOptSection data={section} />;
+            case 'SliderSection':
+                return <SliderSection data={section} />;
 
             case 'ContactFormSection':
                 return <TalkUs data={section} />;

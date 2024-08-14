@@ -10,7 +10,7 @@ import {
 
 
 const Footer = () => {
- 
+
   return (
     <footer>
       <div className="container px-3 footer mx-auto my-8 sm:my-15">
@@ -31,44 +31,56 @@ const Footer = () => {
               Products
             </p>
             <ul className="footer-text ff-inter text-blueshade1">
-              <Link href="/apps/point-of-sale">
+              {/* <Link href="/apps/point-of-sale"> */}
+
+              <Link href="/solutions/supply-chain-management">
+                <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
+                  Supply chain management
+                </li>
+              </Link>
+              <Link href="/solutions/order-management-system">
+                <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
+                  Order Management System
+                </li>
+              </Link>
+              <Link href="solutions/customer-data-platform">
+                <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
+                  Customer Data Platform
+                </li>
+              </Link>
+              <Link href="/unified-commerce/in-store/point-of-sale">
                 <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
                   Point of Sale
                 </li>
               </Link>
-              <Link href="/apps/inventory">
+              <Link href="/unified-commerce/in-store/mobile-pos">
                 <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
-                  Inventory
+                  Mobile POS
                 </li>
               </Link>
-              <Link href="/apps/sales">
+              <Link href="/unified-commerce/in-store/self-checkout">
                 <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
-                  Sales
+                  Self Checkout
                 </li>
               </Link>
-              <Link href="/apps/purchase">
+              <Link href="/unified-commerce/in-store/scan-and-go">
                 <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
-                  Purchase
+                  Scan & Go
                 </li>
               </Link>
-              <Link href="/apps/finance">
+              <Link href="/unified-commerce/store-management/store-app">
                 <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
-                  Finance
+                  Store App
                 </li>
               </Link>
-              <Link href="/apps/hr">
+              <Link href="/unified-commerce/store-management/store-inventory">
                 <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
-                  HRMS
+                  Store Inventory
                 </li>
               </Link>
-              <Link href="/composer">
+              <Link href="/unified-commerce/store-management/store-fulfillment">
                 <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
-                  Composer
-                </li>
-              </Link>
-              <Link href="/apps/price-connect">
-                <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
-                  Price Connect
+                  Store Fulfilment
                 </li>
               </Link>
             </ul>
@@ -83,9 +95,9 @@ const Footer = () => {
                   Our Vision
                 </li>
               </Link>
-              <Link href="/resources/about-cw-suite">
+              <Link href="/company/about-us">
                 <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
-                About CW Suite
+                  About CW Suite
                 </li>
               </Link>
               <Link href="/resources/about-cw-suite#our-team">
@@ -134,7 +146,7 @@ const Footer = () => {
               </Link>
               <Link href="https://help.cwsuite.com/" target="_blank">
                 <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
-                Help Center
+                  Help Center
                 </li>
               </Link>
             </ul>
@@ -144,15 +156,15 @@ const Footer = () => {
               Contact
             </p>
             <ul className="footer-text ff-inter text-blueshade1">
-                <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue ">
+              <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue ">
                 CW Suite LLC
-                </li>
-                <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
-                  3524 Silverside Road, Suite 35B Wilmington, DE 19810 USA              
-                </li>
-                <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
-                support@cwsuite.com                      
-                </li>
+              </li>
+              <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
+                3524 Silverside Road, Suite 35B Wilmington, DE 19810 USA
+              </li>
+              <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
+                support@cwsuite.com
+              </li>
             </ul>
           </div>
         </div>
@@ -168,6 +180,7 @@ const Footer = () => {
               </Link>
               <Link
                 href="/info#cookie"
+
                 className="font-inter font-normal footer-text text-[#98A2B3] mx-2 lg:mx-0 transition-all ease-in duration-200 hover:text-blue"
               >
                 Cookies
