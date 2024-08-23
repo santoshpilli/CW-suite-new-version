@@ -1,5 +1,5 @@
+'use client'
 import React from 'react';
-import Layout from "../../hoc/Layout";
 import Hero from "../../components/sections/HeroSection"
 import FeaturesSection from '../../components/sections/FeaturesSection'
 import TalkUs from '../../components/sections/ContactFormSection';
@@ -59,7 +59,7 @@ const RenderSections = ({ data }) => {
                 return <SliderSection data={section} />;
 
             case 'ContactFormSection':
-                return <TalkUs data={section} />;
+                return <TalkUs data={section} pageName={finalData.pageTitle} />;
             case 'FaqSection':
                 return <Faq data={section} />;
             case 'HappyUsersSection':

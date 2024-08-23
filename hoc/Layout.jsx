@@ -5,8 +5,6 @@ import Sidebar from '../components/Home/Sidebar';
 
 
 const Layout = ({ children, menuData, setSidebarOpen, isSidebarOpen }) => {
-
-
     return (
         <>
             <Navbar

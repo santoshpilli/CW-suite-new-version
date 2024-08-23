@@ -1,7 +1,7 @@
+'use client'
 import React, { useEffect, useState } from "react";
 
 const SliderSection = (data) => {
-    console.log('data=======>', data)
     const aboutsliderdata = [
         {
             heading: "One Passion - One Mission",

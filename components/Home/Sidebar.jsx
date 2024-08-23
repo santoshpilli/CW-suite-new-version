@@ -536,10 +536,11 @@
 
 
 
+'use client'
 
 import Image from "next/image";
 import React, { useState } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import { CrossIcon2 } from "../common/Icons";
@@ -547,8 +548,6 @@ import { CrossIcon2 } from "../common/Icons";
 
 
 const Sidebar = ({ isSidebarOpen, setSidebarOpen, menuData }) => {
-
-
   const router = useRouter();
   const [openMenus, setOpenMenus] = useState([]);
 

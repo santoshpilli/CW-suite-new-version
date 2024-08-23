@@ -1,8 +1,8 @@
+'use client'
 import Image from "next/image";
-import Script from 'next/script';
 import React, { useEffect,useCallback,useState } from "react";
-import { ContactArrowWhiteIcon, LeftArrow } from "../common/Icons";
-import Thankyou from "../common/Thankyou";
+import { ContactArrowWhiteIcon, LeftArrow } from "../../../components/common/Icons";
+import Thankyou from "../../../components/common/Thankyou";
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 
@@ -12,7 +12,7 @@ const Contact = (pageName) => {
   const [formData, setFormData] = useState({
     email: '',
     howcanwehelp: '',
-    pageName:currentPage
+    pageName:"Home"
   });
   const [notification, setNotification] = useState("");
   const [submitData,setSubmitData] = useState({})

@@ -1,6 +1,5 @@
 import Image from "next/image";
 const WhyOptSection = (data) => {
-    console.log('data=========>', data)
     return (
         <>
             <div className="container mx-auto bg-[#FFF3EA] rounded-[20px] h-[550px] md:h-[600px] lg:h-[600px] relative mt-10">
@@ -24,16 +23,10 @@ const WhyOptSection = (data) => {
                                     className="mr-2"
                                 />
                                 <span className="font-inter text-[22px] text-[#101828] font-[700]">
-                                    {/* Embracing Commerce */}
-                                    {/* {feature.title} */}
-
                                     {data?.data?.content?.title}
                                 </span>
                             </div>
                             <span className="font-inter text-[16px] text-[#475467]">
-                                {/* Our suite speaks to the diversity <br /> within commerce,
-                                covering all bases <br /> to accommodate your business model */}
-                                {/* {feature.description} */}
                                 {data?.data?.content?.subtitle}
                             </span>
                         </div>
@@ -49,16 +42,10 @@ const WhyOptSection = (data) => {
                                     className="mr-2"
                                 />
                                 <span className="font-inter text-[22px] text-[#101828] font-[700]">
-                                    {/* Nurturing Innovation */}
-                                    {/* {feature.title} */}
-
                                     {data?.data?.content?.title}
                                 </span>
                             </div>
                             <span className="font-inter text-[16px] text-[#475467]">
-                                {/* Innovation is at our core. We provide <br /> solutions that keep
-                                you ahead of <br /> industry trends */}
-                                {/* {feature.description} */}
                                 {data?.data?.content?.subtitle}
                             </span>
                         </div>
@@ -74,38 +61,18 @@ const WhyOptSection = (data) => {
                                     className="mr-2"
                                 />
                                 <span className="font-inter text-[22px] text-[#101828] font-[700]">
-                                    {/* Harmonious Integration */}
-                                    {/* {feature.title} */}
-
                                     {data?.data?.content?.title}
                                 </span>
                             </div>
                             <span className="font-inter text-[16px] text-[#475467]">
-                                {/* Seamlessly integrating our Enterprise <br /> Apps into your
-                                existing workflows, we <br /> ensure a frictionless adoption
-                                process */}
-                                {/* {feature.description} */}
                                 {data?.data?.content?.subtitle}
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
-            {/* <div className="text-center text-[#475467] font-inter text-[26px] font-light leading-[37px] mt-10">
-        Join us on this exciting journey of technological transformation. Let's
-        shape the <br />
-        future of commerce together with CW Suite
-      </div>
-      <div>
-        <Image src="/images/cw-bglogo.png" height={100} width={100} />
-      </div> */}
-
             <div className="flex items-center justify-center text-[#475467] font-inter text-[26px] font-light leading-[37px] mt-10 relative">
                 <div className="text-center text-[#475467] font-inter text-[26px] font-light leading-[37px] mt-10">
-                    {/* Join us on this exciting journey of technological transformation.
-                    Let's shape the <br />
-                    future of commerce together with CW Suite */}
-                    {/* {feature.description} */}
                     {data?.data?.content?.subtitle}
                 </div>
                 <div className="ml-[10em] sm:ml-[26em]  mt-[40px] absolute  ">

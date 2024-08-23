@@ -5,6 +5,7 @@ import Thankyou from "../common/Thankyou";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const TalkUs = (data) => {
+  // console.log('data=======>', data, data.pageName)
   const { executeRecaptcha } = useGoogleReCaptcha();
   const [formData, setFormData] = useState({
     email: "",
@@ -14,13 +15,14 @@ const TalkUs = (data) => {
   const [submitData, setSubmitData] = useState({});
   const [visible, setVisible] = useState(false);
 
-  useEffect(() => {}, [formData]);
+  useEffect(() => { }, [formData]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: value,
+      pageName: data.pageName,
     }));
   };
 
@@ -48,7 +50,7 @@ const TalkUs = (data) => {
       body: JSON.stringify({
         data: formData,
         gRecaptchaToken: gReCaptchaToken,
-        secreteKey: '',
+        secreteKey: process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SECRET_KEY,
       }),
     })
       .then((res) => res.json())
@@ -59,7 +61,7 @@ const TalkUs = (data) => {
           setFormData({
             email: "",
             howcanwehelp: "",
-            pageName: currentPage,
+            pageName: data.pageName,
           });
         } else {
           setNotification(res?.message);
@@ -67,20 +69,21 @@ const TalkUs = (data) => {
       });
   };
 
-  const createLead = (data) => {
-    fetch("/api/createLead", {
-      method: "POST",
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        if (res.message === "Lead has been generated successfully.") {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
-      });
-  };
+  // const createLead = (data) => {
+  //   fetch("/api/createLead", {
+  //     method: "POST",
+  //     body: JSON.stringify(data),
+  //   })
+  //     .then((res) => res.json())
+  //   console.log('res====>', res)
+  //     .then((res) => {
+  //       if (res.message === "Lead has been generated successfully.") {
+  //         setVisible(true);
+  //       } else {
+  //         setVisible(false);
+  //       }
+  //     });
+  // };
 
   return (
     <>
@@ -93,7 +96,7 @@ const TalkUs = (data) => {
                   {data?.data?.content.title}
                 </h2>
                 <p className="font-normal mt-[12px] sm:mt-5 text-center lg:text-start  text-sm sm:text-md  text-lightgrey ff-inter max-w-[702px]">
-                 {data?.data?.content.subtitle}
+                  {data?.data?.content.subtitle}
                 </p>
                 <div className="flex justify-center lg:justify-start mt-8 lg:mt-0">
                   <div className="lg:hidden flex justify-center">
@@ -144,12 +147,12 @@ const TalkUs = (data) => {
                     </a>
                   </p>
                 </form> */}
-                <form action={data?.data?.content.formAction}  method={data?.data?.content.method} className="mt-8">
-                {data?.data?.content?.components.map((component, index) => {
+                <form onSubmit={handleSumitForm} method="POST" className="mt-8">
+                  {data?.data?.content?.components.map((component, index) => {
                     switch (component.componentType) {
-                    case 'TextField':
+                      case 'TextField':
                         return (
-                        <input
+                          <input
                             key={index}
                             className="w-full h-[45px] sm:h-[60px] px-4 py-2 mt-5 text-[#98A2B3] placeholder:text-[#98A2B3] text-xs ff-inter font-normal outline-none"
                             required
@@ -159,11 +162,11 @@ const TalkUs = (data) => {
                             id={component.props.name}
                             name={component.props.name}
                             onChange={handleChange}
-                        />
+                          />
                         );
-                    case 'TextArea':
+                      case 'TextArea':
                         return (
-                        <textarea
+                          <textarea
                             key={index}
                             className="mt-5 w-full px-4 py-2 text-[#98A2B3] placeholder:text-[#98A2B3] text-xs ff-inter font-normal outline-none"
                             required
@@ -174,32 +177,32 @@ const TalkUs = (data) => {
                             name={component.props.name}
                             value={formData[component.props.name]}
                             onChange={handleChange}
-                        ></textarea>
+                          ></textarea>
                         );
-                    case 'Button':
+                      case 'Button':
                         return (
-                        <button
+                          <button
                             key={index}
                             type={component.props.type}
                             className="mt-5 bg-blue px-6 xl:px-10 py-3 xl:py-4 rounded-full  text-white text-sm flex items-center free-trial-btn-hover  transition-all duration-200 ease-in hover:shadow-lg"
-                        >
+                          >
                             {component.props.label}
                             <LeftArrow />
-                        </button>
+                          </button>
                         );
-                    default:
+                      default:
                         return null;
                     }
-                })}
-                <p className="font-normal text-center lg:text-start mt-6 ff-inter text-1xs text-blueshade1">
+                  })}
+                  <p className="font-normal text-center lg:text-start mt-6 ff-inter text-1xs text-blueshade1">
                     By clicking on 'Send Message' button, you agree to our{" "}
                     <a
-                    style={{ textDecoration: "underline", cursor: "pointer" }}
-                    href="/info#terms"
+                      style={{ textDecoration: "underline", cursor: "pointer" }}
+                      href="/info#terms"
                     >
-                    Terms & Policy
+                      Terms & Policy
                     </a>
-                </p>
+                  </p>
                 </form>
 
               </div>

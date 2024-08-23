@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from "react";
 // import { faqData } from "../common/Helper";
 import FaqListItem from "./FaqListItem";
