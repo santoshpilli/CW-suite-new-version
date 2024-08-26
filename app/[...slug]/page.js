@@ -2,11 +2,62 @@ import React from 'react';
 import axios from 'axios';
 import Layout from '../hoc/Layout';
 import RenderSections from '../../components/renderSections';
+import { MetaData } from "../../components/common/Helper";
 import CustomPages from '../custom/home';
 import ContactUs from '../resources/contact';
 import { getStaticData } from './page.server';
 import Custom404 from '../../app/404';
 
+
+export async function generateMetadata({ params }) {
+  const data1 = await getStaticData(params);
+  const title = data1?.data?.title || 'Default Title';
+  const maintitle = `CW Suite | ${title}`;
+
+  return {
+    title: maintitle,
+    description: MetaData[0].metaDescription,
+    keywords: 'cw suite,retail saas platform, POS, inventory management, purchase management, sales management, finance management, HRMS, low-code app builder',
+    robots: 'index, follow',
+    charset: 'UTF-8',
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/${params?.slug?.join('/')}`,
+    },
+    openGraph: {
+      type: 'website',
+      url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/${params?.slug?.join('/')}`,
+      title: maintitle,
+      description: MetaData[0].metaDescription,
+      images: [
+        {
+          url: 'https://example.com/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Image description',
+        },
+      ],
+      siteName: 'CW Suite',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@CW_Suite',
+      title: maintitle,
+      description: MetaData[0].metaDescription,
+      image: 'https://example.com/twitter-image.jpg',
+    },
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "CW Suite LLC",
+      "url": `${process.env.NEXT_PUBLIC_FRONTEND_URL}`,
+      "logo": "https://example.com/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/cwsuite",
+        "https://twitter.com/cwsuite",
+      ],
+    },
+  };
+}
 
 export default async  function HomePage({params}) {
   const data1 = await getStaticData(params);
