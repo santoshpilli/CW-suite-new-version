@@ -1,13 +1,13 @@
 import React from 'react';
 const Operation = () => {
     const industryData = [
-        {
-            "title": "",
-            "description": "",
-            "image": "/images/operationstore.png",
-            "button": "",
-            "link": ""
-        },
+        // {
+        //     "title": "",
+        //     "description": "",
+        //     "image": "/images/operationstore.png",
+        //     "button": "",
+        //     "link": ""
+        // },
         {
             "title": "Point of Sale",
             "description": "Fast, flexible, and reliable checkout experiences",

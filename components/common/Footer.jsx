@@ -90,21 +90,21 @@ const Footer = () => {
               The Company
             </p>
             <ul className="footer-text ff-inter text-blueshade1">
-              <Link href="/resources/about-cw-suite">
+              {/* <Link href="/resources/about-cw-suite">
                 <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
                   Our Vision
                 </li>
-              </Link>
+              </Link> */}
               <Link href="/company/about-us">
                 <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
                   About CW Suite
                 </li>
               </Link>
-              <Link href="/resources/about-cw-suite#our-team">
+              {/* <Link href="/resources/about-cw-suite#our-team">
                 <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
                   Our Team
                 </li>
-              </Link>
+              </Link> */}
             </ul>
           </div>
           <div className="mt-5">
@@ -134,11 +134,11 @@ const Footer = () => {
                   Knowledge Base
                 </li>
               </Link>
-              <Link href="/underconstruction">
+              {/* <Link href="/underconstruction">
                 <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
                   Developer Docs
                 </li>
-              </Link>
+              </Link> */}
               <Link href="/resources/contact">
                 <li className="mt-[10px] transition-all ease-in duration-200 hover:text-blue">
                   Contact Us
@@ -171,7 +171,7 @@ const Footer = () => {
         <div className="border-t-2 border-[#E4E7EC] max-w-[1434px] mt-12 mx-3"></div>
         <div className="mt-11 sm:mt-11 grid md:grid-cols-2 ">
           <div className="flex lg:block justify-center lg:justify-start">
-            <div className="flex justify-between max-w-[603px]">
+            {/* <div className="flex justify-between max-w-[603px]">
               <Link
                 href="/info#privacy"
                 className="font-inter font-normal footer-text text-[#98A2B3] mx-2 lg:mx-0 transition-all ease-in duration-200 hover:text-blue"
@@ -191,7 +191,7 @@ const Footer = () => {
               >
                 Terms of Use
               </Link>
-            </div>
+            </div> */}
           </div>
           <div className="flex justify-center lg:mt-0 mt-5 lg:justify-end">
             <div className="flex justify-between max-w-[188px]">
